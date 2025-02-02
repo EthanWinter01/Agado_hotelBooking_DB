@@ -19,5 +19,6 @@ begin
     else
         raise notice '% does not exist', to_hotel;
     end if;    
+    commit;
 end
 $$
