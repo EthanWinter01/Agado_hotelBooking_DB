@@ -3,7 +3,7 @@ create or replace function registered_user_view(view_id int)
         hotel varchar,
         check_in_date date,
         check_out_date date,
-        booking_date date
+        booking_date timestamp
     ) 
 language plpgsql
 as
