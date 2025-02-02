@@ -1,5 +1,5 @@
-create or replace function user_view(view_id int)
-    return table(
+create or replace function registered_user_view(view_id int)
+    returns table(
         hotel varchar,
         check_in_date date,
         check_out_date date,
