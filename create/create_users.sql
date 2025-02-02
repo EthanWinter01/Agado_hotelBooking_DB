@@ -1,13 +1,16 @@
 -- Create Users' table 
 -- superclass/subclass by 8A method 
 
+drop table if exists admin;
+drop table if exists unregisterred_user;
+drop table if exists registerred_user;
 drop table if exists usert;
+
 create table usert (
 	user_id int primary key,
 	device_type varchar(32) not null
 );
-	
-drop table if exists admin;
+
 create table admin(
 	user_id int,
 	officer_id int not null,
@@ -17,13 +20,11 @@ create table admin(
 	foreign key (user_id) references usert(user_id)
 );
 	
-drop table if exists unregisterred_user;
 create table unregisterred_user (
 	user_id int, 
 	foreign key (user_id) references usert(user_id) 
 );
 	
-drop table if exists registerred_user;
 create table registerred_user(
 	user_id int,
 	user_name varchar(64) not null,
