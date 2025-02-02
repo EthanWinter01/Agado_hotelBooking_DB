@@ -1,5 +1,5 @@
 create or replace procedure admin_delete_booking(
-delete_booking_id int
+	delete_booking_id int
 )
 language plpgsql
 as $$

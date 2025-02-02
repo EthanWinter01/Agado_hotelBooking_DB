@@ -1,7 +1,7 @@
 create or replace procedure admin_edit_check_date_booking(
-change_booking_id int,
-change_check_in date,
-change_check_out date
+	change_booking_id int,
+	change_check_in date,
+	change_check_out date
 )
 language plpgsql
 as $$
