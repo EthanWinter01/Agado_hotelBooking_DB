@@ -32,7 +32,7 @@ INSERT INTO room (hotel_id, room_id, min_price, max_price, status, room_type) VA
 (5, 502, 1300, 1900, FALSE, 'Deluxe'),
 (5, 503, 1650, 2500, TRUE, 'Suite'),
 (5, 504, 2300, 3200, TRUE, 'Family'),
-(5, 505, 2800, 3800, FALSE, 'Penthouse')
+(5, 505, 2800, 3800, FALSE, 'Penthouse'),
 
 -- Same room in diff hotel
 (1, 201, 1000, 1500, TRUE, 'Standard');
