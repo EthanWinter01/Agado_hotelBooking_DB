@@ -26,10 +26,8 @@ BEGIN
         SET STATUS = false
         WHERE room_id = new_room_id AND hotel_id = change_hotel_id;
 
-        IF user_id_edit >= 900000000 THEN
-            INSERT INTO manages_booking(user_id, booking_id, edit_timestamp)
-            VALUES (user_id_edit, change_booking_id, cast(NOW() AS TIMESTAMP));
-        END IF;    
+        INSERT INTO manages_booking(user_id, booking_id, edit_timestamp)
+        VALUES (user_id_edit, change_booking_id, cast(NOW() AS TIMESTAMP));
 
         raise notice 'Hotel updated successfully.';
 

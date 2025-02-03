@@ -18,10 +18,8 @@ BEGIN
 		duration = change_check_out - change_check_in
 		WHERE booking_id = change_booking_id
 
-        IF user_id_edit >= 900000000 THEN
-            INSERT INTO manages_booking(user_id, booking_id, edit_timestamp)
-            VALUES (user_id_edit, change_booking_id, cast(NOW() AS TIMESTAMP));
-        END IF;
+        INSERT INTO manages_booking(user_id, booking_id, edit_timestamp)
+        VALUES (user_id_edit, change_booking_id, cast(NOW() AS TIMESTAMP));
 
     ELSE
         RAISE NOTICE 'It more than 3 night';
