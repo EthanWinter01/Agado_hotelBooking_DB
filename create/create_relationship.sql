@@ -6,10 +6,10 @@ DROP TABLE IF EXISTS manages_booking cascade;
 --log contain all booking
 CREATE TABLE booking_transaction(
     booking_id INT PRIMARY KEY,
-    booking_DATE DATE NOT NULL,
+    booking_date DATE NOT NULL,
     duration INT,
-    check_in_DATE DATE NOT NULL,
-    check_out_DATE DATE NOT NULL,
+    check_in_date DATE NOT NULL,
+    check_out_date DATE NOT NULL,
     user_id INT,
     hotel_id INT,
     room_id INT,
