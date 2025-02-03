@@ -1,4 +1,4 @@
-create or replace procedure registered_user_edit_date(
+create or replace procedure user_edit_date(
     change_booking_id int,
     change_check_in date,
     change_check_out date
