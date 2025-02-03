@@ -1,41 +1,41 @@
-create or replace procedure user_edit_hotel(
-    change_booking_id int,
-    change_hotel_id int,
-    user_id_edit int
+CREATE OR REPLACE PROCEDURE user_edit_hotel(
+    change_booking_id INT,
+    change_hotel_id INT,
+    user_id_edit INT
 )
-language plpgsql
-as
+LANGUAGE PLPGSQL
+AS
 $$
-declare
-    new_room_id int;
-begin 
-    select min(room_id) 
-    into new_room_id
-    from hotel h
-    join room r on h.hotel_id = r.hotel_id
-    where h.hotel_id = change_hotel_id 
-    and r.status = true;
+DECLARE
+    new_room_id INT;
+BEGIN 
+    SELECT min(room_id) 
+    INTO new_room_id
+    FROM hotel h
+    JOIN room r ON h.hotel_id = r.hotel_id
+    WHERE h.hotel_id = change_hotel_id 
+    AND r.status = true;
 
-    if new_room_id is not null then
-        update booking_transaction
-        set hotel_id = change_hotel_id,
+    IF new_room_id IS NOT NULL THEN
+        UPDATE booking_transaction
+        SET hotel_id = change_hotel_id,
         room_id = new_room_id
-        where change_booking_id = booking_id;
+        WHERE change_booking_id = booking_id;
 
-        update room
-        set status = false
-        where room_id = new_room_id and hotel_id = change_hotel_id;
+        UPDATE room
+        SET STATUS = false
+        WHERE room_id = new_room_id AND hotel_id = change_hotel_id;
 
-        if user_id_edit >= 900000000 then
-            insert into manages_booking(user_id, booking_id, edit_timestamp)
-            VALUES (user_id_edit, change_booking_id, cast(now() as timestamp));
-        end if;    
+        IF user_id_edit >= 900000000 THEN
+            INSERT INTO manages_booking(user_id, booking_id, edit_timestamp)
+            VALUES (user_id_edit, change_booking_id, cast(NOW() AS TIMESTAMP));
+        END IF;    
 
         raise notice 'Hotel updated successfully.';
 
-    else
+    ELSE
         raise notice 'the hotel does not exist';
-    end if;    
-    commit;
-end
+    END IF;    
+    COMMIT;
+END
 $$

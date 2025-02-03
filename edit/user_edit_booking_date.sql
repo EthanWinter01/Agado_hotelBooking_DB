@@ -1,31 +1,31 @@
-create or replace procedure user_edit_date(
-    change_booking_id int,
-    change_check_in date,
-    change_check_out date,
-    user_id_edit int
+CREATE OR REPLACE PROCEDURE user_edit_date(
+    change_booking_id INT,
+    change_check_in DATE,
+    change_check_out DATE,
+    user_id_edit INT
 )
-language plpgsql
-as
+LANGUAGE PLPGSQL
+AS
 $$
-begin
-    if change_check_in > change_check_out then
+BEGIN
+    IF change_check_in > change_check_out THEN
         raise notice 'check in time must come before check out time';
-        
-    elsif change_check_out - change_check_in <= 3 then
-        update booking_transaction
-		set check_in_date = change_check_in, 
+
+    ELSIF change_check_out - change_check_in <= 3 THEN
+        UPDATE booking_transaction
+		SET check_in_date = change_check_in, 
 		check_out_date = change_check_out,
 		duration = change_check_out - change_check_in
-		where booking_id = change_booking_id
+		WHERE booking_id = change_booking_id
 
-        if user_id_edit >= 900000000 then
-            insert into manages_booking(user_id, booking_id, edit_timestamp)
-            VALUES (user_id_edit, change_booking_id, cast(now() as timestamp));
-        end if;
+        IF user_id_edit >= 900000000 THEN
+            INSERT INTO manages_booking(user_id, booking_id, edit_timestamp)
+            VALUES (user_id_edit, change_booking_id, cast(NOW() AS TIMESTAMP));
+        END IF;
 
-    else
-        raise notice 'It more than 3 night';
-    end if;
-	commit;
-end;
+    ELSE
+        RAISE NOTICE 'It more than 3 night';
+    END IF;
+	COMMIT;
+END;
 $$    
