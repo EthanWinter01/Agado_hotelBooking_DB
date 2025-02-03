@@ -21,8 +21,7 @@ CREATE TABLE booking_transaction(
 CREATE TABLE view_hotel_info(
     hotel_id INT,
     user_id INT,
-    view_timestamp TIMESTAMP
-    PRIMARY KEY (hotel_id, user_id),
+    view_timestamp TIMESTAMP,
     FOREIGN KEY(hotel_id) REFERENCES hotel(hotel_id),
     FOREIGN KEY(user_id) REFERENCES usert(user_id)
 );
@@ -32,7 +31,6 @@ CREATE TABLE edit_overall_info(
     hotel_id INT,
     user_id INT,
     edit_timestamp TIMESTAMP,
-    PRIMARY KEY (hotel_id, user_id),
     FOREIGN KEY(hotel_id) REFERENCES hotel(hotel_id),
     FOREIGN KEY(user_id) REFERENCES usert(user_id)
 );
@@ -42,7 +40,6 @@ CREATE TABLE manages_booking(
     user_id INT,
     booking_id INT,
     edit_timestamp TIMESTAMP,
-    PRIMARY KEY (user_id, booking_id), 
     FOREIGN KEY(booking_id) REFERENCES booking_transaction(booking_id),
     FOREIGN KEY(user_id) REFERENCES usert(user_id)
 );
