@@ -17,5 +17,23 @@ BEGIN
         TRUE,  -- ห้องว่าง
         room_type
     );
+
+	-- เพิ่ม room facilities
+	IF room_type = 'Expensive' 
+	THEN 
+	CALL add_room_facilities(hotel_id,room_id,'room_pool');
+	CALL add_room_facilities(hotel_id,room_id,'tv');
+	CALL add_room_facilities(hotel_id,room_id,'fridge');
+	
+	ELSEIF room_type = 'Medium' 
+	THEN 
+	CALL add_room_facilities(hotel_id,room_id,'tv');
+	CALL add_room_facilities(hotel_id,room_id,'fridge');
+	
+	ELSEIF room_type = 'Cheap'
+	THEN 
+	CALL add_room_facilities(hotel_id,room_id,'tv');
+	
+	END IF;
 END;
 $$ LANGUAGE plpgsql;
