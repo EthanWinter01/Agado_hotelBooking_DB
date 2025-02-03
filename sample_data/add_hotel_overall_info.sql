@@ -19,11 +19,11 @@ CALL add_hotel_overall_info(
     'Cozy Cabin Inn', 
     NULL, NULL, 
     NULL, NULL, NULL, NULL,
-    1, 1,   
+    5, 10,   
     200, 300,  
     400, 500,  
     600, 700,  
-    1, 1, 1   
+    2, 3, 4   
 );
 
 --Missing Optional Fields
@@ -42,7 +42,7 @@ CALL add_hotel_overall_info(
 
 --No Pool, No Parking
 CALL add_hotel_overall_info(
-    900000010, 
+    900000009, 
     'http://example.com/hotel4', 
     'Mountain View Lodge', 
     '13:00', '10:30', 
@@ -56,7 +56,7 @@ CALL add_hotel_overall_info(
 
 --Late Check-in, Early Check-out
 CALL add_hotel_overall_info(
-    900000012, 
+    900000004, 
     'http://example.com/latecheckin', 
     'Downtown Plaza Hotel', 
     '18:00', '08:00', 
@@ -70,7 +70,7 @@ CALL add_hotel_overall_info(
 
 --Maximum Floors and Rooms
 CALL add_hotel_overall_info(
-    900000013, 
+    900000005, 
     'http://example.com/max1', 
     'Super Skyscraper Hotel', 
     '12:00', '10:00', 
@@ -84,7 +84,7 @@ CALL add_hotel_overall_info(
 
 --Maximum Room Prices
 CALL add_hotel_overall_info(
-    900000014, 
+    900000005, 
     'http://example.com/max2', 
     'Luxury Haven Resort', 
     '13:30', '11:00', 
@@ -98,7 +98,7 @@ CALL add_hotel_overall_info(
 
 --Maximum Admin ID & All Facilities
 CALL add_hotel_overall_info(
-    999999999, 
+    900000007, 
     'http://example.com/max3', 
     'Ultimate Tower Hotel', 
     '15:00', '12:30', 
@@ -112,7 +112,7 @@ CALL add_hotel_overall_info(
 
 --Maximum Check-in & Check-out Time Values
 CALL add_hotel_overall_info(
-    900000015, 
+    900000008, 
     'http://example.com/max4', 
     'Midnight Express Hotel', 
     '23:59', '00:01', 
@@ -126,7 +126,7 @@ CALL add_hotel_overall_info(
 
 --another Standard Hotel Setup test case
 CALL add_hotel_overall_info(
-    900000016, 
+    900000002, 
     'http://example.com/hotel_standard2', 
     'Sunset Paradise Resort', 
     '15:00', '11:30', 
