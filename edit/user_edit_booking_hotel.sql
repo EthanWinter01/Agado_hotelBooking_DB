@@ -1,19 +1,31 @@
-create or replace procedure registered_user_edit_hotel(
+create or replace procedure user_edit_hotel(
     change_booking_id int,
     change_hotel_id int
 )
 language plpgsql
 as
 $$
+declare
+    new_room_id int;
 begin 
-    if exists (
-        select 1
-        from hotel
-        where hotel_id = change_hotel_id 
-    ) then
+    select min(room_id) 
+    into new_room_id
+    from hotel h
+    join room r on h.hotel_id = r.hotel_id
+    where h.hotel_id = change_hotel_id 
+    and r.status = true;
+
+    if new_room_id is not null then
         update booking_transaction
-        set preferred_hotel = change_hotel
+        set hotel_id = change_hotel_id,
+        room_id = new_room_id
         where change_booking_id = booking_id;
+
+        update room
+        set status = false
+        where room_id = new_room_id and hotel_id = change_hotel_id;
+        raise notice 'Hotel updated successfully.';
+
     else
         raise notice 'the hotel does not exist';
     end if;    
