@@ -1,6 +1,7 @@
 create or replace procedure user_edit_hotel(
     change_booking_id int,
-    change_hotel_id int
+    change_hotel_id int,
+    user_id_edit int
 )
 language plpgsql
 as
@@ -24,6 +25,12 @@ begin
         update room
         set status = false
         where room_id = new_room_id and hotel_id = change_hotel_id;
+
+        if user_id_edit >= 900000000 then
+            insert into manages_booking(user_id, booking_id, edit_timestamp)
+            VALUES (user_id_edit, change_booking_id, cast(now() as timestamp));
+        end if;    
+
         raise notice 'Hotel updated successfully.';
 
     else
