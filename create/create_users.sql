@@ -1,38 +1,37 @@
--- Create Users' table 
+-- CREATE Users' TABLE 
 -- superclass/subclass by 8A method 
 
-drop table if exists admin cascade;
-drop table if exists unregisterred_user cascade;
-drop table if exists registerred_user cascade;
-drop table if exists usert cascade;
+DROP TABLE IF EXISTS admin cascade;
+DROP TABLE IF EXISTS unregisterred_user cascade;
+DROP TABLE IF EXISTS registerred_user cascade;
+DROP TABLE IF EXISTS usert cascade;
 
-create table usert (
-	user_id int primary key,
-	device_type varchar(32) not null
+CREATE TABLE usert (
+	user_id INT PRIMARY KEY,
+	device_type VARCHAR(32) NOT NULL
 );
 
-create table admin(
-	user_id int,
-	officer_id int not null,
-	admin_name varchar(64) not null,
-	admin_password varchar(64) not null, 
-    admin_email varchar(64) not null;
-	telephone_number varchar(10), 
-	foreign key (user_id) references usert(user_id)
+CREATE TABLE admin(
+	user_id INT,
+	officer_id INT NOT NULL,
+	admin_name VARCHAR(64) NOT NULL,
+	admin_password VARCHAR(64) NOT NULL, 
+    admin_email VARCHAR(64) NOT NULL;
+	telephone_number VARCHAR(10), 
+	FOREIGN KEY (user_id) REFERENCES usert(user_id)
 );
 
-create table unregisterred_user (
-	user_id int, 
-	foreign key (user_id) references usert(user_id) 
+CREATE TABLE unregisterred_user (
+	FOREIGN KEY (user_id) REFERENCES usert(user_id) 
 );
 	
-create table registerred_user(
-	user_id int,
-	user_name varchar(64) not null,
-	user_password varchar(64) not null, 
-	user_email varchar(64) not null,
-	telephone_number varchar(10),
-	register_date timestamp not null,
-	birth_date date not null,
-	foreign key(user_id) references usert(user_id) 
+CREATE TABLE registerred_user(
+	user_id INT,
+	user_name VARCHAR(64) NOT NULL,
+	user_password VARCHAR(64) NOT NULL, 
+	user_email VARCHAR(64) NOT NULL,
+	telephone_number VARCHAR(10),
+	register_date TIMESTAMP NOT NULL,
+	birth_date DATE NOT NULL,
+	FOREIGN KEY(user_id) REFERENCES usert(user_id) 
 );
