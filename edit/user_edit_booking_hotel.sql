@@ -29,10 +29,10 @@ BEGIN
         INSERT INTO manages_booking(user_id, booking_id, edit_timestamp)
         VALUES (user_id_edit, change_booking_id, cast(NOW() AS TIMESTAMP));
 
-        raise notice 'Hotel updated successfully.';
+        RAISE NOTICE 'Hotel updated successfully.';
 
     ELSE
-        raise notice 'the hotel does not exist';
+        RAISE EXCEPTION 'the hotel does not exist, or you prefer hotel does not have available room';
     END IF;    
     COMMIT;
 END
