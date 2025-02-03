@@ -20,7 +20,7 @@ declare
     unRegU_id_init constant int := 10000000;
 begin
     if p_user_type = 'admin' then 
-        select coalesce(max(user_id)-admin_id_init, 0) + admin_id_init + 1
+        select max(user_id-admin_id_init, 0) + admin_id_init + 1
             into new_user_id
             from admin;
         insert into usert (user_id, device_type)
@@ -29,7 +29,7 @@ begin
             values (new_user_id, p_officer_id, p_admin_name, p_admin_password, p_telephone_number);
 
     elseif p_user_type = 'unregisterred_user' then
-        select coalesce(max(user_id)-unRegU_id_init, 0) + unRegU_id_init + 1
+        select max(user_id-unRegU_id_init, 0) + unRegU_id_init + 1
             into new_user_id
             from unregisterred_user;
         insert into usert (user_id, device_type)
@@ -38,7 +38,7 @@ begin
             values (new_user_id);
 
     elseif p_user_type = 'registerred_user' then
-        select coalesce(max(user_id)-regU_id_init, 0) + regU_id_init + 1
+        select max(user_id-regU_id_init, 0) + regU_id_init + 1
             into new_user_id
             from registerred_user;
         insert into usert (user_id, device_type)
