@@ -14,6 +14,7 @@ create table booking_transaction(
     hotel_id int,
     room_id int,
     foreign key(hotel_id) references hotel(hotel_id),
+    foreign key(room_id) references room(room_id),
     foreign key(user_id) references usert(user_id)
 );
 
