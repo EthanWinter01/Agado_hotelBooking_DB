@@ -1,128 +1,89 @@
--- Insert an admin user (Thai name)
+-- Admin Sample 1
 call insert_user(
-    'mobile',            -- Device type
-    110,                 -- Officer ID
-    'Phuchit Pimpichai', -- Thai admin name in English-friendly format
-    'adminPass2025',     -- Admin password
-    '0831234567',        -- Thai mobile number
-    null,                -- No username for admin
-    null,                -- No user password for admin
-    null,                -- No email for admin
-    null,                -- No register date for admin
-    null,                -- No birth date for admin
-    'admin'              -- User type
+    'mobile', 101, 'John Doe', 'adminpass123', '1234567890', 'john.doe@email.com', 
+    current_timestamp, '1980-05-15', 'admin'
 );
 
+-- Admin Sample 2
 call insert_user(
-    'mobile',            -- Device type
-    111,                 -- Officer ID
-    'Chaiwat Chitpatima',-- Thai admin name in English-friendly format
-    'secureAdmin123',    -- Admin password
-    '0876543210',        -- Thai mobile number
-    null,                -- No username for admin
-    null,                -- No user password for admin
-    null,                -- No email for admin
-    null,                -- No register date for admin
-    null,                -- No birth date for admin
-    'admin'              -- User type
+    'tablet', 102, 'Alice Smith', 'adminpass456', '2345678901', 'alice.smith@email.com', 
+    current_timestamp, '1985-06-20', 'admin'
 );
 
+-- Admin Sample 3
 call insert_user(
-    'mobile',            -- Device type
-    112,                 -- Officer ID
-    'Surasak Wongdee',   -- Thai admin name in English-friendly format
-    'admin#Secure2025',  -- Admin password
-    '0859876543',        -- Thai mobile number
-    null,                -- No username for admin
-    null,                -- No user password for admin
-    null,                -- No email for admin
-    null,                -- No register date for admin
-    null,                -- No birth date for admin
-    'admin'              -- User type
+    'desktop', 103, 'Bob Johnson', 'adminpass789', '3456789012', 'bob.johnson@email.com', 
+    current_timestamp, '1978-11-10', 'admin'
 );
 
--- Insert an unregistered user (no personal info)
+-- Admin Sample 4
 call insert_user(
-    'mobile',            -- Device type
-    null,                -- No officer ID for unregistered user
-    null,                -- No admin name
-    null,                -- No admin password
-    null,                -- No telephone number
-    null,                -- No username
-    null,                -- No user password
-    null,                -- No email
-    null,                -- No register date
-    null,                -- No birth date
-    'unregisterred_user' -- User type
+    'laptop', 104, 'Emma White', 'adminpass012', '4567890123', 'emma.white@email.com', 
+    current_timestamp, '1990-02-25', 'admin'
 );
 
+-- Admin Sample 5
 call insert_user(
-    'mobile',            -- Device type
-    null,                -- No officer ID for unregistered user
-    null,                -- No admin name
-    null,                -- No admin password
-    null,                -- No telephone number
-    null,                -- No username
-    null,                -- No user password
-    null,                -- No email
-    null,                -- No register date
-    null,                -- No birth date
-    'unregisterred_user' -- User type
+    'mobile', 105, 'David Brown', 'adminpass345', '5678901234', 'david.brown@email.com', 
+    current_timestamp, '1992-07-30', 'admin'
 );
 
+-- Unregisterred User Sample 1
 call insert_user(
-    'mobile',            -- Device type
-    null,                -- No officer ID for unregistered user
-    null,                -- No admin name
-    null,                -- No admin password
-    null,                -- No telephone number
-    null,                -- No username
-    null,                -- No user password
-    null,                -- No email
-    null,                -- No register date
-    null,                -- No birth date
-    'unregisterred_user' -- User type
+    'mobile', 0, 'No Name', 'no_pass', '1234567890', 'noemail1@email.com', 
+    current_timestamp, null, 'unregisterred_user'
 );
 
--- Insert a registered user (Thai teenager)
+-- Unregisterred User Sample 2
 call insert_user(
-    'mobile',            -- Device type
-    null,                -- No officer ID
-    null,                -- No admin name
-    null,                -- No admin password
-    '0897654321',        -- Thai mobile number
-    'Niwat Kittikhun',   -- Popular Thai-style username (first name + last name)
-    'securePass2025',    -- User password
-    'niwat_kittikhun@example.com', -- Email
-    cast(now() as timestamp),  -- Registration date
-    '2007-02-14',        -- Birthdate (Assumed teenager)
-    'registerred_user'   -- User type
+    'tablet', 0, 'Unknown User', 'no_pass', '2345678901', 'noemail2@email.com', 
+    current_timestamp, null, 'unregisterred_user'
 );
 
+-- Unregisterred User Sample 3
 call insert_user(
-    'mobile',            -- Device type
-    null,                -- No officer ID
-    null,                -- No admin name
-    null,                -- No admin password
-    '0886543210',        -- Thai mobile number
-    'Thanakorn Phongsak',-- Popular Thai-style username (first name + last name)
-    'userPass2025',      -- User password
-    'thanakorn_phongsak@example.com', -- Email
-    cast(now() as timestamp),  -- Registration date
-    '2006-08-19',        -- Birthdate (Assumed teenager)
-    'registerred_user'   -- User type
+    'desktop', 0, 'Guest User', 'no_pass', '3456789012', 'noemail3@email.com', 
+    current_timestamp, null, 'unregisterred_user'
 );
 
+-- Unregisterred User Sample 4
 call insert_user(
-    'mobile',            -- Device type
-    null,                -- No officer ID
-    null,                -- No admin name
-    null,                -- No admin password
-    '0872345678',        -- Thai mobile number
-    'Ratchapol Wongsa',  -- Popular Thai-style username (first name + last name)
-    'ratchapol2025',     -- User password
-    'ratchapol_wongsa@example.com', -- Email
-    cast(now() as timestamp),  -- Registration date
-    '2005-11-02',        -- Birthdate (Assumed teenager)
-    'registerred_user'   -- User type
+    'laptop', 0, 'Anonymous User', 'no_pass', '4567890123', 'noemail4@email.com', 
+    current_timestamp, null, 'unregisterred_user'
+);
+
+-- Unregisterred User Sample 5
+call insert_user(
+    'mobile', 0, 'Stranger', 'no_pass', '5678901234', 'noemail5@email.com', 
+    current_timestamp, null, 'unregisterred_user'
+);
+
+-- Registerred User Sample 1
+call insert_user(
+    'mobile', 0, 'James Taylor', 'password123', '1234567890', 'james.taylor@email.com', 
+    current_timestamp, '2000-01-01', 'registerred_user'
+);
+
+-- Registerred User Sample 2
+call insert_user(
+    'tablet', 0, 'Sophia Clark', 'password456', '2345678901', 'sophia.clark@email.com', 
+    current_timestamp, '1995-03-12', 'registerred_user'
+);
+
+-- Registerred User Sample 3
+call insert_user(
+    'desktop', 0, 'Michael Harris', 'password789', '3456789012', 'michael.harris@email.com', 
+    current_timestamp, '1990-05-20', 'registerred_user'
+);
+
+-- Registerred User Sample 4
+call insert_user(
+    'laptop', 0, 'Olivia Lee', 'password012', '4567890123', 'olivia.lee@email.com', 
+    current_timestamp, '1998-11-10', 'registerred_user'
+);
+
+-- Registerred User Sample 5
+call insert_user(
+    'mobile', 0, 'Ethan Walker', 'password345', '5678901234', 'ethan.walker@email.com', 
+    current_timestamp, '1997-07-15', 'registerred_user'
 );
