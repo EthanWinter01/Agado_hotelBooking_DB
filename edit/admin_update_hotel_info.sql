@@ -13,7 +13,6 @@ CREATE OR REPLACE PROCEDURE update_hotel_overall_info(
 DECLARE
     is_admin INT;
     exists_hotel INT;
-    exists_phone INT;
 BEGIN
     SELECT COUNT(*) INTO is_admin FROM admin WHERE user_id = admin_id;
 
@@ -42,15 +41,12 @@ BEGIN
 
     SELECT COUNT(*) INTO exists_phone FROM phonenumber WHERE hotel_id = p_hotel_id;
 
-    IF exists_phone > 0 THEN
-        UPDATE phonenumber
-        SET hotel_number = COALESCE(new_hotel_number, hotel_number)
+    IF new_hotel_number IS NOT NULL THEN
+        UPDATE hotel
+        SET hotel_number = new_hotel_number
         WHERE hotel_id = p_hotel_id;
     ELSE
-        IF new_hotel_number IS NOT NULL THEN
-            INSERT INTO phonenumber(hotel_id, hotel_number)
-            VALUES (p_hotel_id, new_hotel_number);
-        END IF;
+    -- Do nothing, as we don't want to update the phone number if it's NULL
     END IF;
 
     INSERT INTO edit_overall_info (hotel_id, user_id) VALUES (p_hotel_id, admin_id);

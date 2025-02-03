@@ -39,18 +39,12 @@ BEGIN
     hotel_id := util_gen_hotel_id();
 
     -- เพิ่มข้อมูลโรงแรม
-    INSERT INTO hotel(hotel_id, map_url, hotel_location, check_in_time, check_out_time)
-    VALUES (hotel_id, map_url, hotel_location, check_in, check_out);
+    INSERT INTO hotel(hotel_id, map_url, hotel_location, check_in_time, check_out_time, hotel_phonenumber)
+    VALUES (hotel_id, map_url, hotel_location, check_in, check_out, hotel_number);
 
     -- เพิ่มข้อมูลสิ่งอำนวยความสะดวกของโรงแรม
     INSERT INTO hotel_facilities(hotel_id, wifi, pool, valet_parking)
     VALUES (hotel_id, wifi, pool, valet_parking);
-
-    -- เพิ่มเบอร์โทรศัพท์ของโรงแรม (ถ้ามี)
-    IF hotel_number IS NOT NULL THEN
-        INSERT INTO phonenumber(hotel_id, hotel_number)
-        VALUES (hotel_id, hotel_number);
-    END IF;
 
     -- ตรวจสอบค่าพารามิเตอร์ว่าอยู่ในช่วงที่ถูกต้องหรือไม่
     IF c1 < 2 OR c2 <= c1 OR c3 <= c2 OR c3 > (1 + num_floors) THEN
