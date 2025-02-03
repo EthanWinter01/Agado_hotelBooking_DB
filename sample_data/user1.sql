@@ -103,3 +103,58 @@ CALL insert_user('Windows', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'unregiste
 
 CALL insert_user('iOS', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'unregisterred_user');
 CALL insert_user('Android', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'unregisterred_user');
+
+-- Testcases for unregisterred_user with different device types (macOS, Linux, Android, Windows)
+CALL insert_user('macOS', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'unregisterred_user');
+CALL insert_user('Android', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'unregisterred_user');
+CALL insert_user('Windows', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'unregisterred_user');
+
+CALL insert_user('macOS', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'unregisterred_user');
+CALL insert_user('Linux', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'unregisterred_user');
+CALL insert_user('Windows', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'unregisterred_user');
+
+CALL insert_user('Android', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'unregisterred_user');
+CALL insert_user('macOS', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'unregisterred_user');
+CALL insert_user('Linux', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'unregisterred_user');
+
+CALL insert_user('Windows', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'unregisterred_user');
+CALL insert_user('Android', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'unregisterred_user');
+CALL insert_user('Linux', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'unregisterred_user');
+
+CALL insert_user('macOS', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'unregisterred_user');
+CALL insert_user('Windows', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'unregisterred_user');
+CALL insert_user('Android', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'unregisterred_user');
+
+CALL insert_user('macOS', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'unregisterred_user');
+CALL insert_user('Linux', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'unregisterred_user');
+CALL insert_user('Windows', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'unregisterred_user');
+
+
+-- Testcases for registerred_user with different device types (macOS, Linux, Android, Windows)
+CALL insert_user('macOS', NULL, 'Kittichai Tanachot', 'regpass123', '1601234567', 'kittichai.tanachot@example.com', CAST(NOW() AS TIMESTAMP), '1992-07-05', 'registerred_user');
+CALL insert_user('Android', NULL, 'Phatcharaphon Srisai', 'regpass456', '1612345678', 'phatcharaphon.srisai@example.com', CAST(NOW() AS TIMESTAMP), '1994-11-16', 'registerred_user');
+CALL insert_user('Windows', NULL, 'Nittaya Chaimongkhon', 'regpass789', '1623456789', 'nittaya.chaimongkhon@example.com', CAST(NOW() AS TIMESTAMP), '1988-03-30', 'registerred_user');
+
+CALL insert_user('macOS', NULL, 'Sasithorn Wongsakul', 'regpass123', '1634567890', 'sasithorn.wongsakul@example.com', CAST(NOW() AS TIMESTAMP), '1990-09-12', 'registerred_user');
+CALL insert_user('Linux', NULL, 'Natthakrit Wongphiphat', 'regpass456', '1645678901', 'natthakrit.wongphiphat@example.com', CAST(NOW() AS TIMESTAMP), '1993-05-22', 'registerred_user');
+CALL insert_user('Windows', NULL, 'Pattawarin Sittisak', 'regpass789', '1656789012', 'pattawarin.sittisak@example.com', CAST(NOW() AS TIMESTAMP), '1995-02-18', 'registerred_user');
+
+CALL insert_user('Android', NULL, 'Sutthiporn Nontachai', 'regpass123', '1667890123', 'sutthiporn.nontachai@example.com', CAST(NOW() AS TIMESTAMP), '1996-08-20', 'registerred_user');
+CALL insert_user('macOS', NULL, 'Supaporn Srisupap', 'regpass456', '1678901234', 'supaporn.srisupap@example.com', CAST(NOW() AS TIMESTAMP), '1994-04-11', 'registerred_user');
+CALL insert_user('Linux', NULL, 'Sakda Chawpong', 'regpass789', '1689012345', 'sakda.chawpong@example.com', CAST(NOW() AS TIMESTAMP), '1992-06-25', 'registerred_user');
+
+CALL insert_user('Windows', NULL, 'Chitchai Tongsan', 'regpass123', '1690123456', 'chitchai.tongsan@example.com', CAST(NOW() AS TIMESTAMP), '1990-03-01', 'registerred_user');
+CALL insert_user('Android', NULL, 'Anchalee Phungpan', 'regpass456', '1701234567', 'anchalee.phungpan@example.com', CAST(NOW() AS TIMESTAMP), '1997-12-03', 'registerred_user');
+CALL insert_user('macOS', NULL, 'Napaporn Kittithavorn', 'regpass789', '1712345678', 'napaporn.kittithavorn@example.com', CAST(NOW() AS TIMESTAMP), '1991-01-15', 'registerred_user');
+
+CALL insert_user('Linux', NULL, 'Pongpat Suwichai', 'regpass123', '1723456789', 'pongpat.suwichai@example.com', CAST(NOW() AS TIMESTAMP), '1993-09-05', 'registerred_user');
+CALL insert_user('Windows', NULL, 'Suchada Rattanaporn', 'regpass456', '1734567890', 'suchada.rattanaporn@example.com', CAST(NOW() AS TIMESTAMP), '1995-10-11', 'registerred_user');
+CALL insert_user('Android', NULL, 'Suthida Kasemsook', 'regpass789', '1745678901', 'suthida.kasemsook@example.com', CAST(NOW() AS TIMESTAMP), '1999-01-23', 'registerred_user');
+
+CALL insert_user('macOS', NULL, 'Nucharee Panyachai', 'regpass123', '1756789012', 'nucharee.panyachai@example.com', CAST(NOW() AS TIMESTAMP), '1991-12-30', 'registerred_user');
+CALL insert_user('Linux', NULL, 'Visanu Phattanaratchasong', 'regpass456', '1767890123', 'visanu.phattanaratchasong@example.com', CAST(NOW() AS TIMESTAMP), '1992-03-10', 'registerred_user');
+CALL insert_user('Windows', NULL, 'Anchalee Tadsang', 'regpass789', '1778901234', 'anchalee.tadsang@example.com', CAST(NOW() AS TIMESTAMP), '1994-11-08', 'registerred_user');
+
+CALL insert_user('macOS', NULL, 'Taratip Jittikasem', 'regpass123', '1789012345', 'taratip.jittikasem@example.com', CAST(NOW() AS TIMESTAMP), '1996-07-24', 'registerred_user');
+CALL insert_user('Android', NULL, 'Patthara Phisitpanyarak', 'regpass456', '1790123456', 'patthara.phisitpanyarak@example.com', CAST(NOW() AS TIMESTAMP), '1998-04-18', 'registerred_user');
+CALL insert_user('Windows', NULL, 'Prinya Chansirikul', 'regpass789', '1801234567', 'prinya.chansirikul@example.com', CAST(NOW() AS TIMESTAMP), '1993-02-07', 'registerred_user');
