@@ -33,7 +33,7 @@ CREATE TABLE room(
     room_id INT,
     min_price INT,
     max_price INT,
-    status boolean,
+    status BOOLEAN,
     room_type VARCHAR(64),
     PRIMARY KEY (hotel_id, room_id),
     FOREIGN KEY(hotel_id) REFERENCES hotel(hotel_id)
