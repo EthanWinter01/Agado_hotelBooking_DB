@@ -1,48 +1,48 @@
--- Create Hotel table 
+-- Create Hotel Table 
 
-drop table if exists hotel cascade;
-drop table if exists hotel_facilities cascade;
-drop table if exists phonenumber cascade;
-drop table if exists room cascade;
-drop table if exists room_facilities cascade;
+DROP TABLE IF EXISTS hotel cascade;
+DROP TABLE IF EXISTS hotel_facilities cascade;
+DROP TABLE IF EXISTS phonenumber cascade;
+DROP TABLE IF EXISTS room cascade;
+DROP TABLE IF EXISTS room_facilities cascade;
 
-create table hotel(
-    hotel_id int primary key,
-    map_url varchar default null,
-    hotel_location varchar(256),
+CREATE TABLE hotel(
+    hotel_id INT PRIMARY KEY,
+    map_url VARCHAR DEFAULT NULL,
+    hotel_location VARCHAR(256),
     check_in_time time,
     check_out_time time
 );
 
-create table hotel_facilities(
-    hotel_id int primary key,
-    wifi varchar(256) default null,
-    pool varchar(256) default null,
-    valet_parking varchar(256) default null,
-    foreign key(hotel_id) references hotel(hotel_id)
+CREATE TABLE hotel_facilities(
+    hotel_id INT PRIMARY KEY,
+    wifi VARCHAR(256) DEFAULT NULL,
+    pool VARCHAR(256) DEFAULT NULL,
+    valet_parking VARCHAR(256) DEFAULT NULL,
+    FOREIGN KEY(hotel_id) REFERENCES hotel(hotel_id)
 );
 
-create table phonenumber(
-    hotel_id int primary key,
-    hotel_number varchar(10) not null,
-    foreign key(hotel_id) references hotel(hotel_id)
+CREATE TABLE phonenumber(
+    hotel_id INT PRIMARY KEY,
+    hotel_number VARCHAR(10) not NULL,
+    FOREIGN KEY(hotel_id) REFERENCES hotel(hotel_id)
 );
 
-create table room(
-    hotel_id int,
-    room_id int,
-    min_price int,
-    max_price int,
+CREATE TABLE room(
+    hotel_id INT,
+    room_id INT,
+    min_price INT,
+    max_price INT,
     status boolean,
-    room_type varchar(64),
-    primary key (hotel_id, room_id),
-    foreign key(hotel_id) references hotel(hotel_id)
+    room_type VARCHAR(64),
+    PRIMARY KEY (hotel_id, room_id),
+    FOREIGN KEY(hotel_id) REFERENCES hotel(hotel_id)
 );
 
-create table room_facilities(
-    hotel_id int,
-    room_id int,
-    room_facilities varchar(256), --facilities description
-    primary key (hotel_id, room_id),
-    foreign key(hotel_id, room_id) references room(hotel_id, room_id)
+CREATE TABLE room_facilities(
+    hotel_id INT,
+    room_id INT,
+    room_facilities VARCHAR(256), --facilities description
+    PRIMARY KEY (hotel_id, room_id),
+    FOREIGN KEY(hotel_id, room_id) REFERENCES room(hotel_id, room_id)
 );
