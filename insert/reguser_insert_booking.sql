@@ -31,17 +31,6 @@ BEGIN
 
 	-- Update room status to false
 	UPDATE room SET status = FALSE WHERE room_id = book_room_id AND hotel_id = book_hotel_id;
-
-	-- Add own booking user manages_booking
-	INSERT INTO manages_booking (user_id,booking_id)
-	VALUES (book_user_id,new_booking_id);
-
-	-- Add admin manages_booking
-	FOR admin_id in (SELECT user_id FROM admin)
-	LOOP 
-	INSERT INTO manages_booking (user_id,booking_id)
-	VALUES (admin_id,new_booking_id);
-	END LOOP;
 	
 	END IF;
 	
