@@ -1,10 +1,10 @@
 -- Create Users' table 
 -- superclass/subclass by 8A method 
 
-drop table if exists admin;
-drop table if exists unregisterred_user;
-drop table if exists registerred_user;
-drop table if exists usert;
+drop table if exists admin cascade;
+drop table if exists unregisterred_user cascade;
+drop table if exists registerred_user cascade;
+drop table if exists usert cascade;
 
 create table usert (
 	user_id int primary key,
@@ -16,7 +16,7 @@ create table admin(
 	officer_id int not null,
 	admin_name varchar(64) not null,
 	admin_password varchar(64) not null, 
-	telephone_number int, 
+	telephone_number varchar(10), 
 	foreign key (user_id) references usert(user_id)
 );
 	
@@ -30,7 +30,7 @@ create table registerred_user(
 	user_name varchar(64) not null,
 	user_password varchar(64) not null, 
 	user_email varchar(64) not null,
-	telephone_number int,
+	telephone_number varchar(10),
 	register_date timestamp not null,
 	birth_date date not null,
 	foreign key(user_id) references usert(user_id) 

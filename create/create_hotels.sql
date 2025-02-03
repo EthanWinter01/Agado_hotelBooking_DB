@@ -1,10 +1,10 @@
 -- Create Hotel table 
 
-drop table if exists hotel;
-drop table if exists hotel_facilities;
-drop table if exists phonenumber;
-drop table if exists room;
-drop table if exists room_facilities;
+drop table if exists hotel cascade;
+drop table if exists hotel_facilities cascade;
+drop table if exists phonenumber cascade;
+drop table if exists room cascade;
+drop table if exists room_facilities cascade;
 
 create table hotel(
     hotel_id int primary key,
@@ -15,7 +15,7 @@ create table hotel(
 );
 
 create table hotel_facilities(
-    hotel_id int,
+    hotel_id int primary key,
     wifi varchar(256) default null,
     pool varchar(256) default null,
     valet_parking varchar(256) default null,
@@ -23,18 +23,19 @@ create table hotel_facilities(
 );
 
 create table phonenumber(
-    hotel_id int,
+    hotel_id int primary key,
     hotel_number varchar(10) not null,
     foreign key(hotel_id) references hotel(hotel_id)
 );
 
 create table room(
     hotel_id int,
-    room_id int primary key,
+    room_id int,
     min_price int,
     max_price int,
     status boolean,
     room_type varchar(64),
+    primary key (hotel_id, room_id),
     foreign key(hotel_id) references hotel(hotel_id)
 );
 
@@ -42,6 +43,6 @@ create table room_facilities(
     hotel_id int,
     room_id int,
     room_facilities varchar(256), --facilities description
-    foreign key(room_id) references room(room_id),
-    foreign key(hotel_id) references hotel(hotel_id)
+    primary key (hotel_id, room_id),
+    foreign key(hotel_id, room_id) references room(hotel_id, room_id)
 );
