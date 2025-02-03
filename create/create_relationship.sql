@@ -12,6 +12,7 @@ create table booking_transaction(
     check_out_date date not null,
     user_id int,
     hotel_id int,
+    room_id int,
     foreign key(hotel_id) references hotel(hotel_id),
     foreign key(user_id) references usert(user_id)
 );
