@@ -1,45 +1,48 @@
-drop table if exists booking_transaction cascade;
-drop table if exists view_hotel_info cascade;
-drop table if exists edit_overall_info cascade;
-drop table if exists manages_booking cascade;
+DROP TABLE IF EXISTS booking_transaction cascade;
+DROP TABLE IF EXISTS view_hotel_info cascade;
+DROP TABLE IF EXISTS edit_overall_info cascade;
+DROP TABLE IF EXISTS manages_booking cascade;
 
 --log contain all booking
-create table booking_transaction(
-    booking_id int primary key,
-    booking_date date not null,
-    duration int,
-    check_in_date date not null,
-    check_out_date date not null,
-    user_id int,
-    hotel_id int,
-    room_id int,
-    foreign key(hotel_id, room_id) references room(hotel_id, room_id),
-    foreign key(user_id) references usert(user_id)
+CREATE TABLE booking_transaction(
+    booking_id INT PRIMARY KEY,
+    booking_DATE DATE NOT NULL,
+    duration INT,
+    check_in_DATE DATE NOT NULL,
+    check_out_DATE DATE NOT NULL,
+    user_id INT,
+    hotel_id INT,
+    room_id INT,
+    FOREIGN KEY(hotel_id, room_id) REFERENCES room(hotel_id, room_id),
+    FOREIGN KEY(user_id) REFERENCES usert(user_id)
 );
 
 --log for user view each hotel, for rating and popularity
-create table view_hotel_info(
-    hotel_id int,
-    user_id int,
-    primary key (hotel_id, user_id),
-    foreign key(hotel_id) references hotel(hotel_id),
-    foreign key(user_id) references usert(user_id)
+CREATE TABLE view_hotel_info(
+    hotel_id INT,
+    user_id INT,
+    view_timestamp TIMESTAMP
+    PRIMARY KEY (hotel_id, user_id),
+    FOREIGN KEY(hotel_id) REFERENCES hotel(hotel_id),
+    FOREIGN KEY(user_id) REFERENCES usert(user_id)
 );
 
 --log for admin to edit hotel details
-create table edit_overall_info(
-    hotel_id int,
-    user_id int,
-    primary key (hotel_id, user_id),
-    foreign key(hotel_id) references hotel(hotel_id),
-    foreign key(user_id) references usert(user_id)
+CREATE TABLE edit_overall_info(
+    hotel_id INT,
+    user_id INT,
+    edit_timestamp TIMESTAMP,
+    PRIMARY KEY (hotel_id, user_id),
+    FOREIGN KEY(hotel_id) REFERENCES hotel(hotel_id),
+    FOREIGN KEY(user_id) REFERENCES usert(user_id)
 );
 
 --log for admin edit booking details
-create table manages_booking(
-    user_id int,
-    booking_id int,
-    primary key (user_id, booking_id), 
-    foreign key(booking_id) references booking_transaction(booking_id),
-    foreign key(user_id) references usert(user_id)
+CREATE TABLE manages_booking(
+    user_id INT,
+    booking_id INT,
+    edit_timestamp TIMESTAMP,
+    PRIMARY KEY (user_id, booking_id), 
+    FOREIGN KEY(booking_id) REFERENCES booking_transaction(booking_id),
+    FOREIGN KEY(user_id) REFERENCES usert(user_id)
 );
