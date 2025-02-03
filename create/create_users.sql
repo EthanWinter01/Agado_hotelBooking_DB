@@ -16,12 +16,13 @@ CREATE TABLE admin(
 	officer_id INT NOT NULL,
 	admin_name VARCHAR(64) NOT NULL,
 	admin_password VARCHAR(64) NOT NULL, 
-    admin_email VARCHAR(64) NOT NULL;
+    admin_email VARCHAR(64) NOT NULL,
 	telephone_number VARCHAR(10), 
 	FOREIGN KEY (user_id) REFERENCES usert(user_id)
 );
 
 CREATE TABLE unregisterred_user (
+	user_id INT,
 	FOREIGN KEY (user_id) REFERENCES usert(user_id) 
 );
 	
