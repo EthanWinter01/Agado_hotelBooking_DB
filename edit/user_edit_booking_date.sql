@@ -35,6 +35,5 @@ BEGIN
             RAISE EXCEPTION 'It more than 3 night';
         END IF;
     END IF;    
-	COMMIT;
 END;
 $$    
