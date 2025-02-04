@@ -12,7 +12,7 @@ RETURNS TABLE(
     wifi VARCHAR,
     pool VARCHAR,
     valet_parking VARCHAR,
-    available_room INT -- how to also return this
+    available_room INT 
 )
 LANGUAGE plpgsql
 AS
