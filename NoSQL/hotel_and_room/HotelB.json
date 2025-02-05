@@ -1,7 +1,7 @@
 [
     {
         "_id":  "106", 
-        "hotel_location": "Los Angeles",
+        "hotel_location": "Nakhon Si Thammarat",
         "hotel_phonenumber": "+1 555-5678",
         "check_in_time": "15:00",
         "check_out_time": "11:00",
@@ -24,7 +24,7 @@
     },
     {
         "_id": "107",
-        "hotel_location": "San Francisco",
+        "hotel_location": "Nakhon Pathom",
         "hotel_phonenumber": "+1 555-6789",
         "check_in_time": "14:00",
         "check_out_time": "12:00",
@@ -47,7 +47,7 @@
       },
       {
         "_id": "108",
-        "hotel_location": "Miami",
+        "hotel_location": "Phatthalung",
         "hotel_phonenumber": "+1 555-7890",
         "check_in_time": "13:00",
         "check_out_time": "11:00",

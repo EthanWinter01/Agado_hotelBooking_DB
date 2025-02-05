@@ -1,7 +1,7 @@
 [
   {
     "_id":   "109",  
-    "hotel_location": "New York",
+    "hotel_location": "Abu Dhabi",
     "hotel_phonenumber": "+1 555-1234",
     "check_in_time": "14:00",
     "check_out_time": "12:00",
@@ -25,7 +25,7 @@
   },
   {
     "_id": "110",  
-    "hotel_location": "Los Angeles",
+    "hotel_location": "Dubai",
     "hotel_phonenumber": "+1 555-5678",
     "check_in_time": "15:00",
     "check_out_time": "11:00",
