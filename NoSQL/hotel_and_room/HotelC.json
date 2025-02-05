@@ -1,4 +1,5 @@
-{
+[
+  {
     "_id":   "109",  
     "hotel_location": "New York",
     "hotel_phonenumber": "+1 555-1234",
@@ -21,5 +22,30 @@
         "109-109",  
         "109-110"
     ]
-  }
+  },
+  {
+    "_id": "110",  
+    "hotel_location": "Los Angeles",
+    "hotel_phonenumber": "+1 555-5678",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "facilities": {
+      "wifi": true,
+      "pool": true,
+      "valet_parking": true
+    },
+    "rooms": [
+        "110-101",  
+        "110-102",  
+        "110-103",  
+        "110-104",  
+        "110-105",  
+        "110-106",  
+        "110-107",  
+        "110-108",  
+        "110-109",  
+        "110-110"
+    ]
+}
+]
   
