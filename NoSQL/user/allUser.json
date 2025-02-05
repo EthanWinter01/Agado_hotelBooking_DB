@@ -1,0 +1,1183 @@
+[
+    {
+        "_id": "500000001",
+        "user_type": "registered",
+        "device_type": "iOS",
+        "user_details": {
+          "name": "Sudarat Meesang",
+          "email": "sudarat.meesang@example.com",
+          "password": "hashed_regpass123",
+          "telephone_number": "1123456789",
+          "register_date": "2025-02-05T22:50:27.281112",
+          "birth_date": "1996-10-30"
+        }
+      }
+      {
+        "_id": "900000001",
+        "user_type": "admin",
+        "device_type": "iOS",
+        "user_details": {
+          "name": "Sittipong Wongsakul",
+          "email": "sittipong.wongsakul@example.com",
+          "password": "hashed_password123",
+          "telephone_number": "1090123456",
+          "register_date": "2025-02-05T23:22:27.398475",
+          "birth_date": "1987-09-11"
+        },
+        "admin_info": {
+          "officerID": "113"
+        }
+      },
+      {
+        "_id": "900000002",
+        "user_type": "admin",
+        "device_type": "Android",
+        "user_details": {
+          "name": "Pimchanok Jirawat",
+          "email": "pimchanok.jirawat@example.com",
+          "password": "hashed_password456",
+          "telephone_number": "1101234567",
+          "register_date": "2025-02-05T23:22:27.398985",
+          "birth_date": "1990-02-14"
+        },
+        "admin_info": {
+          "officerID": "114"
+        }
+      },
+      {
+        "_id": "900000003",
+        "user_type": "admin",
+        "device_type": "Windows",
+        "user_details": {
+          "name": "Chanin Sutharak",
+          "email": "chanin.sutharak@example.com",
+          "password": "hashed_password789",
+          "telephone_number": "1112345678",
+          "register_date": "2025-02-05T23:22:27.398985",
+          "birth_date": "1992-12-22"
+        },
+        "admin_info": {
+          "officerID": "115"
+        }
+      },
+      {
+        "_id": "500000002",
+        "user_type": "registered",
+        "device_type": "iOS",
+        "user_details": {
+          "name": "Sudarat Meesang",
+          "email": "sudarat.meesang@example.com",
+          "password": "hashed_regpass123",
+          "telephone_number": "1123456789",
+          "register_date": "2025-02-05T23:22:27.398985",
+          "birth_date": "1996-10-30"
+        }
+      },
+      {
+        "_id": "500000003",
+        "user_type": "registered",
+        "device_type": "Android",
+        "user_details": {
+          "name": "Sakchai Phongsak",
+          "email": "sakchai.phongsak@example.com",
+          "password": "hashed_regpass456",
+          "telephone_number": "1134567890",
+          "register_date": "2025-02-05T23:22:27.398985",
+          "birth_date": "1994-04-17"
+        }
+      },
+      {
+        "_id": "500000004",
+        "user_type": "registered",
+        "device_type": "Windows",
+        "user_details": {
+          "name": "Thanyarat Rattanasak",
+          "email": "thanyarat.rattanasak@example.com",
+          "password": "hashed_regpass789",
+          "telephone_number": "1145678901",
+          "register_date": "2025-02-05T23:22:27.398985",
+          "birth_date": "1995-03-03"
+        }
+      },
+      {
+        "_id": "500000005",
+        "user_type": "registered",
+        "device_type": "iOS",
+        "user_details": {
+          "name": "Apichart Tanthanuch",
+          "email": "apichart.tanthanuch@example.com",
+          "password": "hashed_regpass123",
+          "telephone_number": "1156789012",
+          "register_date": "2025-02-05T23:22:27.399509",
+          "birth_date": "1991-07-25"
+        }
+      },
+      {
+        "_id": "500000006",
+        "user_type": "registered",
+        "device_type": "Android",
+        "user_details": {
+          "name": "Kwanjai Chuchai",
+          "email": "kwanjai.chuchai@example.com",
+          "password": "hashed_regpass456",
+          "telephone_number": "1167890123",
+          "register_date": "2025-02-05T23:22:27.399509",
+          "birth_date": "1993-01-19"
+        }
+      },
+      {
+        "_id": "500000007",
+        "user_type": "registered",
+        "device_type": "Windows",
+        "user_details": {
+          "name": "Nattanon Manachai",
+          "email": "nattanon.manachai@example.com",
+          "password": "hashed_regpass789",
+          "telephone_number": "1178901234",
+          "register_date": "2025-02-05T23:22:27.399509",
+          "birth_date": "1990-11-10"
+        }
+      },
+      {
+        "_id": "100000001",
+        "user_type": "unregistered",
+        "device_type": "iOS"
+      },
+      {
+        "_id": "100000002",
+        "user_type": "unregistered",
+        "device_type": "Android"
+      },
+      {
+        "_id": "100000003",
+        "user_type": "unregistered",
+        "device_type": "Windows"
+      },
+      {
+        "_id": "900000004",
+        "user_type": "admin",
+        "device_type": "iOS",
+        "user_details": {
+          "name": "Thanakorn Rattanapong",
+          "email": "thanakorn.rattanapong@example.com",
+          "password": "hashed_password123",
+          "telephone_number": "1189012345",
+          "register_date": "2025-02-05T23:22:27.399509",
+          "birth_date": "1988-01-22"
+        },
+        "admin_info": {
+          "officerID": "116"
+        }
+      },
+      {
+        "_id": "900000005",
+        "user_type": "admin",
+        "device_type": "Android",
+        "user_details": {
+          "name": "Wassana Pongsuk",
+          "email": "wassana.pongsuk@example.com",
+          "password": "hashed_password456",
+          "telephone_number": "1190123456",
+          "register_date": "2025-02-05T23:22:27.399509",
+          "birth_date": "1991-04-25"
+        },
+        "admin_info": {
+          "officerID": "117"
+        }
+      },
+      {
+        "_id": "900000006",
+        "user_type": "admin",
+        "device_type": "Windows",
+        "user_details": {
+          "name": "Supaporn Raksri",
+          "email": "supaporn.raksri@example.com",
+          "password": "hashed_password789",
+          "telephone_number": "1201234567",
+          "register_date": "2025-02-05T23:22:27.400050",
+          "birth_date": "1992-07-30"
+        },
+        "admin_info": {
+          "officerID": "118"
+        }
+      },
+      {
+        "_id": "500000008",
+        "user_type": "registered",
+        "device_type": "iOS",
+        "user_details": {
+          "name": "Kittima Pongtavee",
+          "email": "kittima.pongtavee@example.com",
+          "password": "hashed_regpass123",
+          "telephone_number": "1212345678",
+          "register_date": "2025-02-05T23:22:27.400050",
+          "birth_date": "1993-08-18"
+        }
+      },
+      {
+        "_id": "500000009",
+        "user_type": "registered",
+        "device_type": "Android",
+        "user_details": {
+          "name": "Phakphum Chailai",
+          "email": "phakphum.chailai@example.com",
+          "password": "hashed_regpass456",
+          "telephone_number": "1223456789",
+          "register_date": "2025-02-05T23:22:27.400050",
+          "birth_date": "1994-05-21"
+        }
+      },
+      {
+        "_id": "500000010",
+        "user_type": "registered",
+        "device_type": "Windows",
+        "user_details": {
+          "name": "Nirun Phonjan",
+          "email": "nirun.phonjan@example.com",
+          "password": "hashed_regpass789",
+          "telephone_number": "1234567890",
+          "register_date": "2025-02-05T23:22:27.400050",
+          "birth_date": "1995-06-12"
+        }
+      },
+      {
+        "_id": "500000011",
+        "user_type": "registered",
+        "device_type": "iOS",
+        "user_details": {
+          "name": "Rapeeporn Thitiphan",
+          "email": "rapeeporn.thitiphan@example.com",
+          "password": "hashed_regpass123",
+          "telephone_number": "1245678901",
+          "register_date": "2025-02-05T23:22:27.400050",
+          "birth_date": "1996-03-15"
+        }
+      },
+      {
+        "_id": "500000012",
+        "user_type": "registered",
+        "device_type": "Android",
+        "user_details": {
+          "name": "Saranya Kittinan",
+          "email": "saranya.kittinan@example.com",
+          "password": "hashed_regpass456",
+          "telephone_number": "1256789012",
+          "register_date": "2025-02-05T23:22:27.400050",
+          "birth_date": "1992-02-05"
+        }
+      },
+      {
+        "_id": "500000013",
+        "user_type": "registered",
+        "device_type": "Windows",
+        "user_details": {
+          "name": "Orawan Khemtong",
+          "email": "orawan.khemtong@example.com",
+          "password": "hashed_regpass789",
+          "telephone_number": "1267890123",
+          "register_date": "2025-02-05T23:22:27.400050",
+          "birth_date": "1990-11-17"
+        }
+      },
+      {
+        "_id": "100000004",
+        "user_type": "unregistered",
+        "device_type": "iOS"
+      },
+      {
+        "_id": "100000005",
+        "user_type": "unregistered",
+        "device_type": "Android"
+      },
+      {
+        "_id": "100000006",
+        "user_type": "unregistered",
+        "device_type": "Windows"
+      },
+      {
+        "_id": "900000007",
+        "user_type": "admin",
+        "device_type": "iOS",
+        "user_details": {
+          "name": "Jirawat Charoenwong",
+          "email": "jirawat.charoenwong@example.com",
+          "password": "hashed_password123",
+          "telephone_number": "1278901234",
+          "register_date": "2025-02-05T23:22:27.401061",
+          "birth_date": "1985-02-15"
+        },
+        "admin_info": {
+          "officerID": "119"
+        }
+      },
+      {
+        "_id": "900000008",
+        "user_type": "admin",
+        "device_type": "Android",
+        "user_details": {
+          "name": "Piyarat Sittipong",
+          "email": "piyarat.sittipong@example.com",
+          "password": "hashed_password456",
+          "telephone_number": "1289012345",
+          "register_date": "2025-02-05T23:22:27.401061",
+          "birth_date": "1998-06-10"
+        },
+        "admin_info": {
+          "officerID": "120"
+        }
+      },
+      {
+        "_id": "900000009",
+        "user_type": "admin",
+        "device_type": "Windows",
+        "user_details": {
+          "name": "Prapaporn Saengsawang",
+          "email": "prapaporn.saengsawang@example.com",
+          "password": "hashed_password789",
+          "telephone_number": "1290123456",
+          "register_date": "2025-02-05T23:22:27.401061",
+          "birth_date": "2001-03-24"
+        },
+        "admin_info": {
+          "officerID": "121"
+        }
+      },
+      {
+        "_id": "500000014",
+        "user_type": "registered",
+        "device_type": "iOS",
+        "user_details": {
+          "name": "Nattapol Phinyo",
+          "email": "nattapol.phinyo@example.com",
+          "password": "hashed_regpass123",
+          "telephone_number": "1301234567",
+          "register_date": "2025-02-05T23:22:27.401061",
+          "birth_date": "1997-12-17"
+        }
+      },
+      {
+        "_id": "500000015",
+        "user_type": "registered",
+        "device_type": "Android",
+        "user_details": {
+          "name": "Tassana Pongsathaporn",
+          "email": "tassana.pongsathaporn@example.com",
+          "password": "hashed_regpass456",
+          "telephone_number": "1312345678",
+          "register_date": "2025-02-05T23:22:27.401596",
+          "birth_date": "2003-08-05"
+        }
+      },
+      {
+        "_id": "500000016",
+        "user_type": "registered",
+        "device_type": "Windows",
+        "user_details": {
+          "name": "Kritsanapong Srisai",
+          "email": "kritsanapong.srisai@example.com",
+          "password": "hashed_regpass789",
+          "telephone_number": "1323456789",
+          "register_date": "2025-02-05T23:22:27.401596",
+          "birth_date": "1994-10-22"
+        }
+      },
+      {
+        "_id": "500000017",
+        "user_type": "registered",
+        "device_type": "iOS",
+        "user_details": {
+          "name": "Panchalee Ruksa",
+          "email": "panchalee.ruksa@example.com",
+          "password": "hashed_regpass123",
+          "telephone_number": "1334567890",
+          "register_date": "2025-02-05T23:22:27.401596",
+          "birth_date": "1999-07-30"
+        }
+      },
+      {
+        "_id": "500000018",
+        "user_type": "registered",
+        "device_type": "Android",
+        "user_details": {
+          "name": "Viroj Phothong",
+          "email": "viroj.phothong@example.com",
+          "password": "hashed_regpass456",
+          "telephone_number": "1345678901",
+          "register_date": "2025-02-05T23:22:27.401596",
+          "birth_date": "1990-11-25"
+        }
+      },
+      {
+        "_id": "500000019",
+        "user_type": "registered",
+        "device_type": "Windows",
+        "user_details": {
+          "name": "Sumalee Duangchun",
+          "email": "sumalee.duangchun@example.com",
+          "password": "hashed_regpass789",
+          "telephone_number": "1356789012",
+          "register_date": "2025-02-05T23:22:27.401596",
+          "birth_date": "1986-04-14"
+        }
+      },
+      {
+        "_id": "500000020",
+        "user_type": "registered",
+        "device_type": "iOS",
+        "user_details": {
+          "name": "Atchara Sukhavasi",
+          "email": "atchara.sukhavasi@example.com",
+          "password": "hashed_regpass123",
+          "telephone_number": "1367890123",
+          "register_date": "2025-02-05T23:22:27.402124",
+          "birth_date": "1992-01-18"
+        }
+      },
+      {
+        "_id": "500000021",
+        "user_type": "registered",
+        "device_type": "Android",
+        "user_details": {
+          "name": "Pattaraporn Wiphatthanasri",
+          "email": "pattaraporn.wiphatthanasri@example.com",
+          "password": "hashed_regpass456",
+          "telephone_number": "1378901234",
+          "register_date": "2025-02-05T23:22:27.402124",
+          "birth_date": "2000-09-09"
+        }
+      },
+      {
+        "_id": "500000022",
+        "user_type": "registered",
+        "device_type": "Windows",
+        "user_details": {
+          "name": "Ananya Roongkiat",
+          "email": "ananya.roongkiat@example.com",
+          "password": "hashed_regpass789",
+          "telephone_number": "1389012345",
+          "register_date": "2025-02-05T23:22:27.402124",
+          "birth_date": "1993-12-13"
+        }
+      },
+      {
+        "_id": "100000007",
+        "user_type": "unregistered",
+        "device_type": "iOS"
+      },
+      {
+        "_id": "100000008",
+        "user_type": "unregistered",
+        "device_type": "Android"
+      },
+      {
+        "_id": "100000009",
+        "user_type": "unregistered",
+        "device_type": "Windows"
+      },
+      {
+        "_id": "500000023",
+        "user_type": "registered",
+        "device_type": "iOS",
+        "user_details": {
+          "name": "Amonrat Chaisiri",
+          "email": "amonrat.chaisiri@example.com",
+          "password": "hashed_regpass123",
+          "telephone_number": "1390123456",
+          "register_date": "2025-02-05T23:22:27.403144",
+          "birth_date": "1995-02-19"
+        }
+      },
+      {
+        "_id": "500000024",
+        "user_type": "registered",
+        "device_type": "Android",
+        "user_details": {
+          "name": "Prasert Bunkhot",
+          "email": "prasert.bunkhot@example.com",
+          "password": "hashed_regpass456",
+          "telephone_number": "1401234567",
+          "register_date": "2025-02-05T23:22:27.403144",
+          "birth_date": "1998-08-02"
+        }
+      },
+      {
+        "_id": "500000025",
+        "user_type": "registered",
+        "device_type": "Windows",
+        "user_details": {
+          "name": "Rujira Phonrak",
+          "email": "rujira.phonrak@example.com",
+          "password": "hashed_regpass789",
+          "telephone_number": "1412345678",
+          "register_date": "2025-02-05T23:22:27.403144",
+          "birth_date": "2000-01-10"
+        }
+      },
+      {
+        "_id": "500000026",
+        "user_type": "registered",
+        "device_type": "iOS",
+        "user_details": {
+          "name": "Pattaraporn Kittikulsri",
+          "email": "pattaraporn.kittikulsri@example.com",
+          "password": "hashed_regpass123",
+          "telephone_number": "1423456789",
+          "register_date": "2025-02-05T23:22:27.403144",
+          "birth_date": "1994-06-22"
+        }
+      },
+      {
+        "_id": "500000027",
+        "user_type": "registered",
+        "device_type": "Android",
+        "user_details": {
+          "name": "Sittichai Ratthanaporn",
+          "email": "sittichai.ratthanaporn@example.com",
+          "password": "hashed_regpass456",
+          "telephone_number": "1434567890",
+          "register_date": "2025-02-05T23:22:27.403144",
+          "birth_date": "1993-09-30"
+        }
+      },
+      {
+        "_id": "500000028",
+        "user_type": "registered",
+        "device_type": "Windows",
+        "user_details": {
+          "name": "Sopida Lertwittayaporn",
+          "email": "sopida.lertwittayaporn@example.com",
+          "password": "hashed_regpass789",
+          "telephone_number": "1445678901",
+          "register_date": "2025-02-05T23:22:27.403144",
+          "birth_date": "1988-11-04"
+        }
+      },
+      {
+        "_id": "500000029",
+        "user_type": "registered",
+        "device_type": "iOS",
+        "user_details": {
+          "name": "Thanya Phothong",
+          "email": "thanya.phothong@example.com",
+          "password": "hashed_regpass123",
+          "telephone_number": "1456789012",
+          "register_date": "2025-02-05T23:22:27.403144",
+          "birth_date": "1991-03-12"
+        }
+      },
+      {
+        "_id": "500000030",
+        "user_type": "registered",
+        "device_type": "Android",
+        "user_details": {
+          "name": "Nattakarn Phonghantakarn",
+          "email": "nattakarn.phonghantakarn@example.com",
+          "password": "hashed_regpass456",
+          "telephone_number": "1467890123",
+          "register_date": "2025-02-05T23:22:27.403670",
+          "birth_date": "2001-07-14"
+        }
+      },
+      {
+        "_id": "500000031",
+        "user_type": "registered",
+        "device_type": "Windows",
+        "user_details": {
+          "name": "Anusorn Hiranratcha",
+          "email": "anusorn.hiranratcha@example.com",
+          "password": "hashed_regpass789",
+          "telephone_number": "1478901234",
+          "register_date": "2025-02-05T23:22:27.403670",
+          "birth_date": "1997-10-08"
+        }
+      },
+      {
+        "_id": "500000032",
+        "user_type": "registered",
+        "device_type": "iOS",
+        "user_details": {
+          "name": "Chalida Boonsri",
+          "email": "chalida.boonsri@example.com",
+          "password": "hashed_regpass123",
+          "telephone_number": "1489012345",
+          "register_date": "2025-02-05T23:22:27.403670",
+          "birth_date": "1990-01-21"
+        }
+      },
+      {
+        "_id": "500000033",
+        "user_type": "registered",
+        "device_type": "Android",
+        "user_details": {
+          "name": "Soraya Chumphu",
+          "email": "soraya.chumphu@example.com",
+          "password": "hashed_regpass456",
+          "telephone_number": "1490123456",
+          "register_date": "2025-02-05T23:22:27.403670",
+          "birth_date": "1992-04-17"
+        }
+      },
+      {
+        "_id": "500000034",
+        "user_type": "registered",
+        "device_type": "Windows",
+        "user_details": {
+          "name": "Krissanapong Phonchai",
+          "email": "krissanapong.phonchai@example.com",
+          "password": "hashed_regpass789",
+          "telephone_number": "1501234567",
+          "register_date": "2025-02-05T23:22:27.404189",
+          "birth_date": "1995-05-28"
+        }
+      },
+      {
+        "_id": "500000035",
+        "user_type": "registered",
+        "device_type": "iOS",
+        "user_details": {
+          "name": "Chananchida Charoen",
+          "email": "chananchida.charoen@example.com",
+          "password": "hashed_regpass123",
+          "telephone_number": "1512345678",
+          "register_date": "2025-02-05T23:22:27.404189",
+          "birth_date": "2000-02-25"
+        }
+      },
+      {
+        "_id": "500000036",
+        "user_type": "registered",
+        "device_type": "Android",
+        "user_details": {
+          "name": "Orapin Chaisongkram",
+          "email": "orapin.chaisongkram@example.com",
+          "password": "hashed_regpass456",
+          "telephone_number": "1523456789",
+          "register_date": "2025-02-05T23:22:27.404189",
+          "birth_date": "1999-11-13"
+        }
+      },
+      {
+        "_id": "500000037",
+        "user_type": "registered",
+        "device_type": "Windows",
+        "user_details": {
+          "name": "Nongluck Phuengkasem",
+          "email": "nongluck.phuengkasem@example.com",
+          "password": "hashed_regpass789",
+          "telephone_number": "1534567890",
+          "register_date": "2025-02-05T23:22:27.404189",
+          "birth_date": "1994-06-03"
+        }
+      },
+      {
+        "_id": "500000038",
+        "user_type": "registered",
+        "device_type": "iOS",
+        "user_details": {
+          "name": "Varit Phaechan",
+          "email": "varit.phaechan@example.com",
+          "password": "hashed_regpass123",
+          "telephone_number": "1545678901",
+          "register_date": "2025-02-05T23:22:27.404189",
+          "birth_date": "1996-12-05"
+        }
+      },
+      {
+        "_id": "500000039",
+        "user_type": "registered",
+        "device_type": "Android",
+        "user_details": {
+          "name": "Chinwadee Tangpai",
+          "email": "chinwadee.tangpai@example.com",
+          "password": "hashed_regpass456",
+          "telephone_number": "1556789012",
+          "register_date": "2025-02-05T23:22:27.404189",
+          "birth_date": "1998-03-22"
+        }
+      },
+      {
+        "_id": "500000040",
+        "user_type": "registered",
+        "device_type": "Windows",
+        "user_details": {
+          "name": "Peechaya Wongsuwan",
+          "email": "peechaya.wongsuwan@example.com",
+          "password": "hashed_regpass789",
+          "telephone_number": "1567890123",
+          "register_date": "2025-02-05T23:22:27.404189",
+          "birth_date": "2002-01-09"
+        }
+      },
+      {
+        "_id": "500000041",
+        "user_type": "registered",
+        "device_type": "iOS",
+        "user_details": {
+          "name": "Apirak Chokchaisiri",
+          "email": "apirak.chokchaisiri@example.com",
+          "password": "hashed_regpass123",
+          "telephone_number": "1578901234",
+          "register_date": "2025-02-05T23:22:27.404189",
+          "birth_date": "1995-07-17"
+        }
+      },
+      {
+        "_id": "500000042",
+        "user_type": "registered",
+        "device_type": "Android",
+        "user_details": {
+          "name": "Pornsuda Wongsuntharam",
+          "email": "pornsuda.wongsuntharam@example.com",
+          "password": "hashed_regpass456",
+          "telephone_number": "1589012345",
+          "register_date": "2025-02-05T23:22:27.404189",
+          "birth_date": "1991-08-26"
+        }
+      },
+      {
+        "_id": "500000043",
+        "user_type": "registered",
+        "device_type": "Windows",
+        "user_details": {
+          "name": "Sivaporn Manodhin",
+          "email": "sivaporn.manodhin@example.com",
+          "password": "hashed_regpass789",
+          "telephone_number": "1590123456",
+          "register_date": "2025-02-05T23:22:27.404189",
+          "birth_date": "1993-09-05"
+        }
+      },
+      {
+        "_id": "100000010",
+        "user_type": "unregistered",
+        "device_type": "iOS"
+      },
+      {
+        "_id": "100000011",
+        "user_type": "unregistered",
+        "device_type": "Android"
+      },
+      {
+        "_id": "100000012",
+        "user_type": "unregistered",
+        "device_type": "Windows"
+      },
+      {
+        "_id": "100000013",
+        "user_type": "unregistered",
+        "device_type": "iOS"
+      },
+      {
+        "_id": "100000014",
+        "user_type": "unregistered",
+        "device_type": "Android"
+      },
+      {
+        "_id": "100000015",
+        "user_type": "unregistered",
+        "device_type": "Windows"
+      },
+      {
+        "_id": "100000016",
+        "user_type": "unregistered",
+        "device_type": "iOS"
+      },
+      {
+        "_id": "100000017",
+        "user_type": "unregistered",
+        "device_type": "Android"
+      },
+      {
+        "_id": "100000018",
+        "user_type": "unregistered",
+        "device_type": "Windows"
+      },
+      {
+        "_id": "100000019",
+        "user_type": "unregistered",
+        "device_type": "iOS"
+      },
+      {
+        "_id": "100000020",
+        "user_type": "unregistered",
+        "device_type": "Android"
+      },
+      {
+        "_id": "100000021",
+        "user_type": "unregistered",
+        "device_type": "Windows"
+      },
+      {
+        "_id": "100000022",
+        "user_type": "unregistered",
+        "device_type": "iOS"
+      },
+      {
+        "_id": "100000023",
+        "user_type": "unregistered",
+        "device_type": "Android"
+      },
+      {
+        "_id": "100000024",
+        "user_type": "unregistered",
+        "device_type": "macOS"
+      },
+      {
+        "_id": "100000025",
+        "user_type": "unregistered",
+        "device_type": "Android"
+      },
+      {
+        "_id": "100000026",
+        "user_type": "unregistered",
+        "device_type": "Windows"
+      },
+      {
+        "_id": "100000027",
+        "user_type": "unregistered",
+        "device_type": "macOS"
+      },
+      {
+        "_id": "100000028",
+        "user_type": "unregistered",
+        "device_type": "Linux"
+      },
+      {
+        "_id": "100000029",
+        "user_type": "unregistered",
+        "device_type": "Windows"
+      },
+      {
+        "_id": "100000030",
+        "user_type": "unregistered",
+        "device_type": "Android"
+      },
+      {
+        "_id": "100000031",
+        "user_type": "unregistered",
+        "device_type": "macOS"
+      },
+      {
+        "_id": "100000032",
+        "user_type": "unregistered",
+        "device_type": "Linux"
+      },
+      {
+        "_id": "100000033",
+        "user_type": "unregistered",
+        "device_type": "Windows"
+      },
+      {
+        "_id": "100000034",
+        "user_type": "unregistered",
+        "device_type": "Android"
+      },
+      {
+        "_id": "100000035",
+        "user_type": "unregistered",
+        "device_type": "Linux"
+      },
+      {
+        "_id": "100000036",
+        "user_type": "unregistered",
+        "device_type": "macOS"
+      },
+      {
+        "_id": "100000037",
+        "user_type": "unregistered",
+        "device_type": "Windows"
+      },
+      {
+        "_id": "100000038",
+        "user_type": "unregistered",
+        "device_type": "Android"
+      },
+      {
+        "_id": "100000039",
+        "user_type": "unregistered",
+        "device_type": "macOS"
+      },
+      {
+        "_id": "100000040",
+        "user_type": "unregistered",
+        "device_type": "Linux"
+      },
+      {
+        "_id": "100000041",
+        "user_type": "unregistered",
+        "device_type": "Windows"
+      },
+      {
+        "_id": "500000044",
+        "user_type": "registered",
+        "device_type": "macOS",
+        "user_details": {
+          "name": "Kittichai Tanachot",
+          "email": "kittichai.tanachot@example.com",
+          "password": "hashed_regpass123",
+          "telephone_number": "1601234567",
+          "register_date": "2025-02-05T23:22:27.406228",
+          "birth_date": "1992-07-05"
+        }
+      },
+      {
+        "_id": "500000045",
+        "user_type": "registered",
+        "device_type": "Android",
+        "user_details": {
+          "name": "Phatcharaphon Srisai",
+          "email": "phatcharaphon.srisai@example.com",
+          "password": "hashed_regpass456",
+          "telephone_number": "1612345678",
+          "register_date": "2025-02-05T23:22:27.406228",
+          "birth_date": "1994-11-16"
+        }
+      },
+      {
+        "_id": "500000046",
+        "user_type": "registered",
+        "device_type": "Windows",
+        "user_details": {
+          "name": "Nittaya Chaimongkhon",
+          "email": "nittaya.chaimongkhon@example.com",
+          "password": "hashed_regpass789",
+          "telephone_number": "1623456789",
+          "register_date": "2025-02-05T23:22:27.406228",
+          "birth_date": "1988-03-30"
+        }
+      },
+      {
+        "_id": "500000047",
+        "user_type": "registered",
+        "device_type": "macOS",
+        "user_details": {
+          "name": "Sasithorn Wongsakul",
+          "email": "sasithorn.wongsakul@example.com",
+          "password": "hashed_regpass123",
+          "telephone_number": "1634567890",
+          "register_date": "2025-02-05T23:22:27.406228",
+          "birth_date": "1990-09-12"
+        }
+      },
+      {
+        "_id": "500000048",
+        "user_type": "registered",
+        "device_type": "Linux",
+        "user_details": {
+          "name": "Natthakrit Wongphiphat",
+          "email": "natthakrit.wongphiphat@example.com",
+          "password": "hashed_regpass456",
+          "telephone_number": "1645678901",
+          "register_date": "2025-02-05T23:22:27.406228",
+          "birth_date": "1993-05-22"
+        }
+      },
+      {
+        "_id": "500000049",
+        "user_type": "registered",
+        "device_type": "Windows",
+        "user_details": {
+          "name": "Pattawarin Sittisak",
+          "email": "pattawarin.sittisak@example.com",
+          "password": "hashed_regpass789",
+          "telephone_number": "1656789012",
+          "register_date": "2025-02-05T23:22:27.407243",
+          "birth_date": "1995-02-18"
+        }
+      },
+      {
+        "_id": "500000050",
+        "user_type": "registered",
+        "device_type": "Android",
+        "user_details": {
+          "name": "Sutthiporn Nontachai",
+          "email": "sutthiporn.nontachai@example.com",
+          "password": "hashed_regpass123",
+          "telephone_number": "1667890123",
+          "register_date": "2025-02-05T23:22:27.407243",
+          "birth_date": "1996-08-20"
+        }
+      },
+      {
+        "_id": "500000051",
+        "user_type": "registered",
+        "device_type": "macOS",
+        "user_details": {
+          "name": "Supaporn Srisupap",
+          "email": "supaporn.srisupap@example.com",
+          "password": "hashed_regpass456",
+          "telephone_number": "1678901234",
+          "register_date": "2025-02-05T23:22:27.407243",
+          "birth_date": "1994-04-11"
+        }
+      },
+      {
+        "_id": "500000052",
+        "user_type": "registered",
+        "device_type": "Linux",
+        "user_details": {
+          "name": "Sakda Chawpong",
+          "email": "sakda.chawpong@example.com",
+          "password": "hashed_regpass789",
+          "telephone_number": "1689012345",
+          "register_date": "2025-02-05T23:22:27.407243",
+          "birth_date": "1992-06-25"
+        }
+      },
+      {
+        "_id": "500000053",
+        "user_type": "registered",
+        "device_type": "Windows",
+        "user_details": {
+          "name": "Chitchai Tongsan",
+          "email": "chitchai.tongsan@example.com",
+          "password": "hashed_regpass123",
+          "telephone_number": "1690123456",
+          "register_date": "2025-02-05T23:22:27.407243",
+          "birth_date": "1990-03-01"
+        }
+      },
+      {
+        "_id": "500000054",
+        "user_type": "registered",
+        "device_type": "Android",
+        "user_details": {
+          "name": "Anchalee Phungpan",
+          "email": "anchalee.phungpan@example.com",
+          "password": "hashed_regpass456",
+          "telephone_number": "1701234567",
+          "register_date": "2025-02-05T23:22:27.407243",
+          "birth_date": "1997-12-03"
+        }
+      },
+      {
+        "_id": "500000055",
+        "user_type": "registered",
+        "device_type": "macOS",
+        "user_details": {
+          "name": "Napaporn Kittithavorn",
+          "email": "napaporn.kittithavorn@example.com",
+          "password": "hashed_regpass789",
+          "telephone_number": "1712345678",
+          "register_date": "2025-02-05T23:22:27.407243",
+          "birth_date": "1991-01-15"
+        }
+      },
+      {
+        "_id": "500000056",
+        "user_type": "registered",
+        "device_type": "Linux",
+        "user_details": {
+          "name": "Pongpat Suwichai",
+          "email": "pongpat.suwichai@example.com",
+          "password": "hashed_regpass123",
+          "telephone_number": "1723456789",
+          "register_date": "2025-02-05T23:22:27.407243",
+          "birth_date": "1993-09-05"
+        }
+      },
+      {
+        "_id": "500000057",
+        "user_type": "registered",
+        "device_type": "Windows",
+        "user_details": {
+          "name": "Suchada Rattanaporn",
+          "email": "suchada.rattanaporn@example.com",
+          "password": "hashed_regpass456",
+          "telephone_number": "1734567890",
+          "register_date": "2025-02-05T23:22:27.407243",
+          "birth_date": "1995-10-11"
+        }
+      },
+      {
+        "_id": "500000058",
+        "user_type": "registered",
+        "device_type": "Android",
+        "user_details": {
+          "name": "Suthida Kasemsook",
+          "email": "suthida.kasemsook@example.com",
+          "password": "hashed_regpass789",
+          "telephone_number": "1745678901",
+          "register_date": "2025-02-05T23:22:27.407243",
+          "birth_date": "1999-01-23"
+        }
+      },
+      {
+        "_id": "500000059",
+        "user_type": "registered",
+        "device_type": "macOS",
+        "user_details": {
+          "name": "Nucharee Panyachai",
+          "email": "nucharee.panyachai@example.com",
+          "password": "hashed_regpass123",
+          "telephone_number": "1756789012",
+          "register_date": "2025-02-05T23:22:27.407243",
+          "birth_date": "1991-12-30"
+        }
+      },
+      {
+        "_id": "500000060",
+        "user_type": "registered",
+        "device_type": "Linux",
+        "user_details": {
+          "name": "Visanu Phattanaratchasong",
+          "email": "visanu.phattanaratchasong@example.com",
+          "password": "hashed_regpass456",
+          "telephone_number": "1767890123",
+          "register_date": "2025-02-05T23:22:27.407243",
+          "birth_date": "1992-03-10"
+        }
+      },
+      {
+        "_id": "500000061",
+        "user_type": "registered",
+        "device_type": "Windows",
+        "user_details": {
+          "name": "Anchalee Tadsang",
+          "email": "anchalee.tadsang@example.com",
+          "password": "hashed_regpass789",
+          "telephone_number": "1778901234",
+          "register_date": "2025-02-05T23:22:27.407243",
+          "birth_date": "1994-11-08"
+        }
+      },
+      {
+        "_id": "500000062",
+        "user_type": "registered",
+        "device_type": "macOS",
+        "user_details": {
+          "name": "Taratip Jittikasem",
+          "email": "taratip.jittikasem@example.com",
+          "password": "hashed_regpass123",
+          "telephone_number": "1789012345",
+          "register_date": "2025-02-05T23:22:27.408571",
+          "birth_date": "1996-07-24"
+        }
+      },
+      {
+        "_id": "500000063",
+        "user_type": "registered",
+        "device_type": "Android",
+        "user_details": {
+          "name": "Patthara Phisitpanyarak",
+          "email": "patthara.phisitpanyarak@example.com",
+          "password": "hashed_regpass456",
+          "telephone_number": "1790123456",
+          "register_date": "2025-02-05T23:22:27.408571",
+          "birth_date": "1998-04-18"
+        }
+      },
+      {
+        "_id": "500000064",
+        "user_type": "registered",
+        "device_type": "Windows",
+        "user_details": {
+          "name": "Prinya Chansirikul",
+          "email": "prinya.chansirikul@example.com",
+          "password": "hashed_regpass789",
+          "telephone_number": "1801234567",
+          "register_date": "2025-02-05T23:22:27.408571",
+          "birth_date": "1993-02-07"
+        }
+      }
+]
