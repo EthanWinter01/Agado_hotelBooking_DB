@@ -125,3 +125,10 @@ sql[91] = "CALL insert_user('Windows', NULL, 'Anchalee Tadsang', 'regpass789', '
 sql[92] = "CALL insert_user('macOS', NULL, 'Taratip Jittikasem', 'regpass123', '1789012345', 'taratip.jittikasem@example.com', CAST(NOW() AS TIMESTAMP), '1996-07-24', 'registerred_user');";
 sql[93] = "CALL insert_user('Android', NULL, 'Patthara Phisitpanyarak', 'regpass456', '1790123456', 'patthara.phisitpanyarak@example.com', CAST(NOW() AS TIMESTAMP), '1998-04-18', 'registerred_user');";
 sql[94] = "CALL insert_user('Windows', NULL, 'Prinya Chansirikul', 'regpass789', '1801234567', 'prinya.chansirikul@example.com', CAST(NOW() AS TIMESTAMP), '1993-02-07', 'registerred_user');";
+
+
+
+x = ["1",
+     "2",
+     "3",
+     ]
