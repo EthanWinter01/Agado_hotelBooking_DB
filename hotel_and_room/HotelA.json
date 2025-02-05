@@ -1,0 +1,92 @@
+[
+  {
+    "_id":  "101",   
+    "hotel_location": "New York",
+    "hotel_phonenumber": "+1 555-1234",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "wifi": true,
+      "pool": false,
+      "valet_parking": true
+    },
+    "rooms": [
+       "101-101",   
+       "101-102",   
+       "101-103",   
+       "101-104"
+    ]
+  },
+  {
+    "_id":  "102",   
+    "hotel_location": "Los Angeles",
+    "hotel_phonenumber": "+1 555-5678",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "facilities": {
+      "wifi": true,
+      "pool": true,
+      "valet_parking": false
+    },
+    "rooms": [
+       "102-101",   
+       "102-102",   
+       "102-103",   
+       "102-104"
+    ]
+  },
+  {
+    "_id":  "103",   
+    "hotel_location": "Chicago",
+    "hotel_phonenumber": "+1 555-9876",
+    "check_in_time": "13:00",
+    "check_out_time": "10:00",
+    "facilities": {
+      "wifi": true,
+      "pool": false,
+      "valet_parking": true
+    },
+    "rooms": [
+       "103-101",   
+       "103-102",   
+       "103-103",   
+       "103-104"
+    ]
+  },
+  {
+    "_id":  "104",   
+    "hotel_location": "Houston",
+    "hotel_phonenumber": "+1 555-2468",
+    "check_in_time": "16:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "wifi": false,
+      "pool": true,
+      "valet_parking": true
+    },
+    "rooms": [
+       "104-101",   
+       "104-102",   
+       "104-103",   
+       "104-104"
+    ]
+  },
+  {
+    "_id":  "105",   
+    "hotel_location": "Miami",
+    "hotel_phonenumber": "+1 555-1357",
+    "check_in_time": "14:30",
+    "check_out_time": "11:30",
+    "facilities": {
+      "wifi": true,
+      "pool": true,
+      "valet_parking": false
+    },
+    "rooms": [
+       "105-101",   
+       "105-102",   
+       "105-103",   
+       "105-104"
+    ]
+  }
+]

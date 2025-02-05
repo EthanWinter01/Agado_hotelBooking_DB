@@ -1,0 +1,71 @@
+[
+    {
+        "_id":  "106", 
+        "hotel_location": "Los Angeles",
+        "hotel_phonenumber": "+1 555-5678",
+        "check_in_time": "15:00",
+        "check_out_time": "11:00",
+        "facilities": {
+          "wifi": true,
+          "pool": true,
+          "valet_parking": true,
+          "gym": true
+        },
+        "rooms": [
+           "106-101", 
+           "106-102", 
+           "106-201", 
+           "106-202", 
+           "106-301", 
+           "106-302", 
+           "106-401", 
+           "106-402"
+        ]
+    },
+    {
+        "_id": "107",
+        "hotel_location": "San Francisco",
+        "hotel_phonenumber": "+1 555-6789",
+        "check_in_time": "14:00",
+        "check_out_time": "12:00",
+        "facilities": {
+          "wifi": true,
+          "pool": true,
+          "valet_parking": false,
+          "gym": true
+        },
+        "rooms": [
+          "107-101",
+          "107-102",
+          "107-201",
+          "107-202",
+          "107-301",
+          "107-302",
+          "107-401",
+          "107-402"
+        ]
+      },
+      {
+        "_id": "108",
+        "hotel_location": "Miami",
+        "hotel_phonenumber": "+1 555-7890",
+        "check_in_time": "13:00",
+        "check_out_time": "11:00",
+        "facilities": {
+          "wifi": true,
+          "pool": true,
+          "valet_parking": true,
+          "gym": false
+        },
+        "rooms": [
+          "108-101",
+          "108-102",
+          "108-201",
+          "108-202",
+          "108-301",
+          "108-302",
+          "108-401",
+          "108-402"
+        ]
+      }
+]

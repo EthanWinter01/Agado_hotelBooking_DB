@@ -1,0 +1,25 @@
+{
+    "_id":   "109",  
+    "hotel_location": "New York",
+    "hotel_phonenumber": "+1 555-1234",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "wifi": true,
+      "pool": true,
+      "valet_parking": false
+    },
+    "rooms": [
+        "109-101",  
+        "109-102",  
+        "109-103",  
+        "109-104",  
+        "109-105",  
+        "109-106",  
+        "109-107",  
+        "109-108",  
+        "109-109",  
+        "109-110"
+    ]
+  }
+  

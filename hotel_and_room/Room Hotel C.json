@@ -1,0 +1,103 @@
+[
+    {
+      "_id":  "109-101" ,
+      "hotel_id":  "109" ,
+      "room_number": 101,
+      "min_price": 350,
+      "max_price": 700,
+      "status": true,
+      "room_type": "Standard",
+      "facilities": ["AC", "TV", "WiFi"]
+    },
+    {
+      "_id":  "109-102" ,
+      "hotel_id":  "109" ,
+      "room_number": 102,
+      "min_price": 420,
+      "max_price": 800,
+      "status": true,
+      "room_type": "Deluxe",
+      "facilities": ["AC", "TV", "Free Breakfast"]
+    },
+    {
+      "_id":  "109-103" ,
+      "hotel_id":  "109" ,
+      "room_number": 103,
+      "min_price": 500,
+      "max_price": 1000,
+      "status": false,
+      "room_type": "Suite",
+      "facilities": ["AC", "TV", "Mini Bar", "Jacuzzi"]
+    },
+    {
+      "_id":  "109-104" ,
+      "hotel_id":  "109" ,
+      "room_number": 104,
+      "min_price": 380,
+      "max_price": 750,
+      "status": true,
+      "room_type": "Standard",
+      "facilities": ["AC", "TV", "WiFi"]
+    },
+    {
+      "_id":  "109-105" ,
+      "hotel_id":  "109" ,
+      "room_number": 105,
+      "min_price": 450,
+      "max_price": 850,
+      "status": false,
+      "room_type": "Deluxe",
+      "facilities": ["AC", "TV", "Free Breakfast", "City View"]
+    },
+    {
+      "_id":  "109-106" ,
+      "hotel_id":  "109" ,
+      "room_number": 106,
+      "min_price": 530,
+      "max_price": 1100,
+      "status": true,
+      "room_type": "Suite",
+      "facilities": ["AC", "TV", "Mini Bar", "Sea View"]
+    },
+    {
+      "_id":  "109-107" ,
+      "hotel_id":  "109" ,
+      "room_number": 107,
+      "min_price": 300,
+      "max_price": 650,
+      "status": true,
+      "room_type": "Budget",
+      "facilities": ["Fan", "TV", "WiFi"]
+    },
+    {
+      "_id":  "109-108" ,
+      "hotel_id":  "109" ,
+      "room_number": 108,
+      "min_price": 400,
+      "max_price": 780,
+      "status": false,
+      "room_type": "Standard",
+      "facilities": ["AC", "TV", "WiFi"]
+    },
+    {
+      "_id":  "109-109" ,
+      "hotel_id":  "109" ,
+      "room_number": 109,
+      "min_price": 490,
+      "max_price": 970,
+      "status": true,
+      "room_type": "Deluxe",
+      "facilities": ["AC", "TV", "Free Breakfast", "Balcony"]
+    },
+    {
+      "_id":  "109-110" ,
+      "hotel_id":  "109" ,
+      "room_number": 110,
+      "min_price": 600,
+      "max_price": 1300,
+      "status": false,
+      "room_type": "Presidential Suite",
+      "facilities": ["AC", "TV", "Mini Bar", "Private Pool", "Ocean View"]
+    }
+  ]
+  

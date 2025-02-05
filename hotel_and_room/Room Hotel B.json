@@ -1,0 +1,247 @@
+[
+    {
+        "_id":  "106-101", 
+        "hotel_id":  "103", 
+        "room_number": 101,
+        "min_price": 100,
+        "max_price": 180,
+        "status": true,
+        "room_type": "Deluxe",
+        "facilities": ["AC", "TV", "Mini Bar"]
+      },
+      {
+        "_id":  "106-102", 
+        "hotel_id":  "103", 
+        "room_number": 102,
+        "min_price": 120,
+        "max_price": 200,
+        "status": false,
+        "room_type": "Standard",
+        "facilities": ["TV", "Free Breakfast"]
+      },
+      {
+        "_id":  "106-201", 
+        "hotel_id":  "103", 
+        "room_number": 201,
+        "min_price": 130,
+        "max_price": 210,
+        "status": true,
+        "room_type": "Suite",
+        "facilities": ["AC", "TV", "Mini Bar", "Free Breakfast"]
+      },
+      {
+        "_id":  "106-202", 
+        "hotel_id":  "103", 
+        "room_number": 202,
+        "min_price": 140,
+        "max_price": 220,
+        "status": false,
+        "room_type": "Deluxe",
+        "facilities": ["TV", "Mini Bar"]
+      },
+      {
+        "_id":  "106-301", 
+        "hotel_id":  "103", 
+        "room_number": 301,
+        "min_price": 110,
+        "max_price": 190,
+        "status": true,
+        "room_type": "Standard",
+        "facilities": ["AC", "TV"]
+      },
+      {
+        "_id":  "106-302", 
+        "hotel_id":  "103", 
+        "room_number": 302,
+        "min_price": 150,
+        "max_price": 230,
+        "status": false,
+        "room_type": "Suite",
+        "facilities": ["AC", "TV", "Mini Bar", "Free Breakfast"]
+      },
+      {
+        "_id":  "106-401", 
+        "hotel_id":  "103", 
+        "room_number": 401,
+        "min_price": 160,
+        "max_price": 250,
+        "status": true,
+        "room_type": "Suite",
+        "facilities": ["AC", "TV", "Mini Bar", "Free Breakfast"]
+      },
+      {
+        "_id":  "106-402", 
+        "hotel_id":  "103", 
+        "room_number": 402,
+        "min_price": 120,
+        "max_price": 200,
+        "status": false,
+        "room_type": "Deluxe",
+        "facilities": ["TV", "Mini Bar"]
+      }
+,       
+
+    {
+        "_id": "107-101",
+        "hotel_id": "107",
+        "room_number": 101,
+        "min_price": 110,
+        "max_price": 190,
+        "status": true,
+        "room_type": "Deluxe",
+        "facilities": ["AC", "TV", "Mini Bar"]
+    },
+    {
+        "_id": "107-102",
+        "hotel_id": "107",
+        "room_number": 102,
+        "min_price": 130,
+        "max_price": 210,
+        "status": false,
+        "room_type": "Standard",
+        "facilities": ["TV", "Free Breakfast"]
+    },
+    {
+        "_id": "107-201",
+        "hotel_id": "107",
+        "room_number": 201,
+        "min_price": 140,
+        "max_price": 220,
+        "status": true,
+        "room_type": "Suite",
+        "facilities": ["AC", "TV", "Mini Bar", "Free Breakfast"]
+    },
+    {
+        "_id": "107-202",
+        "hotel_id": "107",
+        "room_number": 202,
+        "min_price": 150,
+        "max_price": 230,
+        "status": false,
+        "room_type": "Deluxe",
+        "facilities": ["TV", "Mini Bar"]
+    },
+    {
+        "_id": "107-301",
+        "hotel_id": "107",
+        "room_number": 301,
+        "min_price": 120,
+        "max_price": 200,
+        "status": true,
+        "room_type": "Standard",
+        "facilities": ["AC", "TV"]
+    },
+    {
+        "_id": "107-302",
+        "hotel_id": "107",
+        "room_number": 302,
+        "min_price": 160,
+        "max_price": 250,
+        "status": false,
+        "room_type": "Suite",
+        "facilities": ["AC", "TV", "Mini Bar", "Free Breakfast"]
+    },
+    {
+        "_id": "107-401",
+        "hotel_id": "107",
+        "room_number": 401,
+        "min_price": 170,
+        "max_price": 260,
+        "status": true,
+        "room_type": "Suite",
+        "facilities": ["AC", "TV", "Mini Bar", "Free Breakfast"]
+    },
+    {
+        "_id": "107-402",
+        "hotel_id": "107",
+        "room_number": 402,
+        "min_price": 130,
+        "max_price": 210,
+        "status": false,
+        "room_type": "Deluxe",
+        "facilities": ["TV", "Mini Bar"]
+    },
+
+
+    {
+        "_id": "108-101",
+        "hotel_id": "108",
+        "room_number": 101,
+        "min_price": 115,
+        "max_price": 195,
+        "status": true,
+        "room_type": "Deluxe",
+        "facilities": ["AC", "TV", "Mini Bar"]
+      },
+      {
+        "_id": "108-102",
+        "hotel_id": "108",
+        "room_number": 102,
+        "min_price": 125,
+        "max_price": 205,
+        "status": false,
+        "room_type": "Standard",
+        "facilities": ["TV", "Free Breakfast"]
+      },
+      {
+        "_id": "108-201",
+        "hotel_id": "108",
+        "room_number": 201,
+        "min_price": 135,
+        "max_price": 215,
+        "status": true,
+        "room_type": "Suite",
+        "facilities": ["AC", "TV", "Mini Bar", "Free Breakfast"]
+      },
+      {
+        "_id": "108-202",
+        "hotel_id": "108",
+        "room_number": 202,
+        "min_price": 145,
+        "max_price": 225,
+        "status": false,
+        "room_type": "Deluxe",
+        "facilities": ["TV", "Mini Bar"]
+      },
+      {
+        "_id": "108-301",
+        "hotel_id": "108",
+        "room_number": 301,
+        "min_price": 125,
+        "max_price": 205,
+        "status": true,
+        "room_type": "Standard",
+        "facilities": ["AC", "TV"]
+      },
+      {
+        "_id": "108-302",
+        "hotel_id": "108",
+        "room_number": 302,
+        "min_price": 155,
+        "max_price": 235,
+        "status": false,
+        "room_type": "Suite",
+        "facilities": ["AC", "TV", "Mini Bar", "Free Breakfast"]
+      },
+      {
+        "_id": "108-401",
+        "hotel_id": "108",
+        "room_number": 401,
+        "min_price": 165,
+        "max_price": 255,
+        "status": true,
+        "room_type": "Suite",
+        "facilities": ["AC", "TV", "Mini Bar", "Free Breakfast"]
+      },
+      {
+        "_id": "108-402",
+        "hotel_id": "108",
+        "room_number": 402,
+        "min_price": 135,
+        "max_price": 215,
+        "status": false,
+        "room_type": "Deluxe",
+        "facilities": ["TV", "Mini Bar"]
+      }
+      ]
+          
