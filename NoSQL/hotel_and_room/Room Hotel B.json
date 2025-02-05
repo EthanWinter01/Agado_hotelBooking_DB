@@ -1,7 +1,7 @@
 [
     {
         "_id":  "106-101", 
-        "hotel_id":  "103", 
+        "hotel_id":  "106", 
         "room_number": 101,
         "min_price": 100,
         "max_price": 180,
@@ -11,7 +11,7 @@
       },
       {
         "_id":  "106-102", 
-        "hotel_id":  "103", 
+        "hotel_id":  "106", 
         "room_number": 102,
         "min_price": 120,
         "max_price": 200,
@@ -21,7 +21,7 @@
       },
       {
         "_id":  "106-201", 
-        "hotel_id":  "103", 
+        "hotel_id":  "106", 
         "room_number": 201,
         "min_price": 130,
         "max_price": 210,
@@ -31,7 +31,7 @@
       },
       {
         "_id":  "106-202", 
-        "hotel_id":  "103", 
+        "hotel_id":  "106", 
         "room_number": 202,
         "min_price": 140,
         "max_price": 220,
@@ -41,7 +41,7 @@
       },
       {
         "_id":  "106-301", 
-        "hotel_id":  "103", 
+        "hotel_id":  "106", 
         "room_number": 301,
         "min_price": 110,
         "max_price": 190,
@@ -51,7 +51,7 @@
       },
       {
         "_id":  "106-302", 
-        "hotel_id":  "103", 
+        "hotel_id":  "106", 
         "room_number": 302,
         "min_price": 150,
         "max_price": 230,
@@ -61,7 +61,7 @@
       },
       {
         "_id":  "106-401", 
-        "hotel_id":  "103", 
+        "hotel_id":  "106", 
         "room_number": 401,
         "min_price": 160,
         "max_price": 250,
@@ -71,7 +71,7 @@
       },
       {
         "_id":  "106-402", 
-        "hotel_id":  "103", 
+        "hotel_id":  "106", 
         "room_number": 402,
         "min_price": 120,
         "max_price": 200,
