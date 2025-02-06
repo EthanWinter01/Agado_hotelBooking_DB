@@ -1,0 +1,128 @@
+{
+    "title": "hotel_reservation",
+    "required": ["_id", "usert", "hotel", "booking_transaction"],
+    "properties": {
+      "usert": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "object",
+          "properties": {
+            "user_id": { "bsonType": "int" },
+            "device_type": { "bsonType": "string" },
+            "admin": {
+              "bsonType": "object",
+              "properties": {
+                "officer_id": { "bsonType": "int" },
+                "admin_name": { "bsonType": "string" },
+                "admin_password": { "bsonType": "string" },
+                "admin_email": { "bsonType": "string" },
+                "telephone_number": { "bsonType": "string", "pattern": "^[0-9]{10}$" }
+              }
+            },
+            "registerred_user": {
+              "bsonType": "object",
+              "properties": {
+                "user_name": { "bsonType": "string" },
+                "user_password": { "bsonType": "string" },
+                "user_email": { "bsonType": "string" },
+                "telephone_number": { "bsonType": "string", "pattern": "^[0-9]{10}$" },
+                "register_date": { "bsonType": "date" },
+                "birth_date": { "bsonType": "date" }
+              }
+            }
+          }
+        }
+      },
+      "hotel": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "object",
+          "properties": {
+            "hotel_id": { "bsonType": "int" },
+            "map_url": { "bsonType": "string" },
+            "hotel_location": { "bsonType": "string" },
+            "hotel_phonenumber": { "bsonType": "string", "pattern": "^[0-9]{10}$" },
+            "check_in_time": { "bsonType": "string" },
+            "check_out_time": { "bsonType": "string" },
+            "hotel_facilities": {
+              "bsonType": "object",
+              "properties": {
+                "wifi": { "bsonType": "string" },
+                "pool": { "bsonType": "string" },
+                "valet_parking": { "bsonType": "string" }
+              }
+            },
+            "rooms": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "object",
+                "properties": {
+                  "room_id": { "bsonType": "int" },
+                  "min_price": { "bsonType": "int" },
+                  "max_price": { "bsonType": "int" },
+                  "status": { "bsonType": "bool" },
+                  "room_type": { "bsonType": "string" },
+                  "room_facilities": { "bsonType": "string" }
+                }
+              }
+            }
+          }
+        }
+      },
+      "booking_transaction": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "object",
+          "properties": {
+            "booking_id": { "bsonType": "int" },
+            "booking_date": { "bsonType": "date" },
+            "duration": { "bsonType": "int" },
+            "check_in_date": { "bsonType": "date" },
+            "check_out_date": { "bsonType": "date" },
+            "user_id": { "bsonType": "int" },
+            "hotel_id": { "bsonType": "int" },
+            "room_id": { "bsonType": "int" }
+          }
+        }
+      },
+      "logs": {
+        "bsonType": "object",
+        "properties": {
+          "view_hotel_info": {
+            "bsonType": "array",
+            "items": {
+              "bsonType": "object",
+              "properties": {
+                "hotel_id": { "bsonType": "int" },
+                "user_id": { "bsonType": "int" },
+                "view_timestamp": { "bsonType": "date" }
+              }
+            }
+          },
+          "edit_overall_info": {
+            "bsonType": "array",
+            "items": {
+              "bsonType": "object",
+              "properties": {
+                "hotel_id": { "bsonType": "int" },
+                "user_id": { "bsonType": "int" },
+                "edit_timestamp": { "bsonType": "date" }
+              }
+            }
+          },
+          "manages_booking": {
+            "bsonType": "array",
+            "items": {
+              "bsonType": "object",
+              "properties": {
+                "user_id": { "bsonType": "int" },
+                "booking_id": { "bsonType": "int" },
+                "edit_timestamp": { "bsonType": "date" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
