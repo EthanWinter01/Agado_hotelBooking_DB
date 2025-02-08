@@ -50,6 +50,10 @@ BEGIN
     INSERT INTO hotel(hotel_id, map_url, hotel_location, check_in_time, check_out_time, hotel_phonenumber, hotel_facilities)
         VALUES (hotel_id, map_url, hotel_location, check_in, check_out, hotel_number, facilities);
 
+    CALL insert_room_type_facilities(hotel_id, 'Cheap', facilities1);
+    CALL insert_room_type_facilities(hotel_id, 'Medium', facilities2);
+    CALL insert_room_type_facilities(hotel_id, 'Expensive', facilities3);
+
     -- -- Add hotel amenities information
     -- INSERT INTO hotel_facilities(hotel_id, wifi, pool, valet_parking)
     --     VALUES (hotel_id, wifi, pool, valet_parking);
