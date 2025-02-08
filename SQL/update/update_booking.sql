@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE user_update_date(
+CREATE OR REPLACE PROCEDURE update_booking(
     booking_id_update INT,
     update_check_in DATE,
     update_check_out DATE,
