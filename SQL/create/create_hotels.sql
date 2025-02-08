@@ -37,5 +37,5 @@ CREATE TABLE room(
 
 CREATE TABLE room_facilities(
     hotel_id INT,
-    room_facilities VARCHAR(256), --facilities description
+    room_facilities VARCHAR(256) --facilities description
 );

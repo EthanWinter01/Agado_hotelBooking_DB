@@ -34,7 +34,7 @@ DECLARE
     room_id INT;
     room_price_min INT;
     room_price_max INT;
-    room_facilities VARCHAR(256),
+    room_facilities VARCHAR(256);
     room_type VARCHAR(64);
 BEGIN
     -- Check admin rights
@@ -75,7 +75,7 @@ BEGIN
         ELSE
             room_price_min := min3;
             room_price_max := max3;
-            room_facilities := facilities3
+            room_facilities := facilities3;
             room_type := 'Expensive';
         END IF;
 
