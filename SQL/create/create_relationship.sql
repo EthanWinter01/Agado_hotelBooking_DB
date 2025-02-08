@@ -49,8 +49,8 @@ CREATE TABLE hotel_log(
     action_type VARCHAR,
     action_timestamp TIMESTAMP,
     action_description VARCHAR(256),
-    FOREIGN KEY (user_id) REFERENCES hotel(hotel_id),
-    FOREIGN KEY (hotel_id) REFERENCES usert(user_id)
+    FOREIGN KEY (user_id) REFERENCES usert(user_id),
+    FOREIGN KEY (hotel_id) REFERENCES hotel(hotel_id)
 );
 
 CREATE TABLE booking_log(
