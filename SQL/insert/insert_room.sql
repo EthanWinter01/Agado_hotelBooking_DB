@@ -2,7 +2,7 @@ CREATE OR REPLACE PROCEDURE insert_room(
     hotel_id INT, 
     floor INT, 
     room_id INT, 
-    room_type VARCHAR(64), 
+    room_type VARCHAR(64)
 )
 LANGUAGE plpgsql 
 AS $$
