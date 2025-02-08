@@ -20,7 +20,9 @@ CREATE OR REPLACE PROCEDURE insert_hotel_overall_info(
     c2 INT DEFAULT 5,              -- The first floor is a middle level room.
     c3 INT DEFAULT 8,              -- The first floor is an expensive room.
     insert_description VARCHAR(256) DEFAULT NULL 
-) AS $$
+) 
+LANGUAGE plpgsql
+AS $$
 DECLARE
     is_admin INT;
     hotel_id INT;
@@ -41,11 +43,11 @@ BEGIN
 
     -- Add hotel information
     INSERT INTO hotel(hotel_id, map_url, hotel_location, check_in_time, check_out_time, hotel_phonenumber)
-    VALUES (hotel_id, map_url, hotel_location, check_in, check_out, hotel_number);
+        VALUES (hotel_id, map_url, hotel_location, check_in, check_out, hotel_number);
 
     -- Add hotel amenities information
     INSERT INTO hotel_facilities(hotel_id, wifi, pool, valet_parking)
-    VALUES (hotel_id, wifi, pool, valet_parking);
+        VALUES (hotel_id, wifi, pool, valet_parking);
 
     -- Verify that the parameter values ​​are within the correct range.
     IF c1 < 2 OR c2 <= c1 OR c3 <= c2 OR c3 > (1 + num_floors) THEN
@@ -71,12 +73,12 @@ BEGIN
 
         -- Loop creates rooms within the floor.
         FOR room_id IN 1..num_rooms_per_floor LOOP
-            CALL add_room(hotel_id, floor, (floor * 100) + room_id, room_type, room_price_min, room_price_max);
+            CALL insert_room(hotel_id, floor, (floor * 100) + room_id, room_type, room_price_min, room_price_max);
         END LOOP;
     END LOOP;
 
     -- Record information that the admin added this hotel.
-    INSERT INTO hotel_info (hotel_id, user_id, action_timestamp, action_type, action_description) 
+    INSERT INTO hotel_log (hotel_id, user_id, action_timestamp, action_type, action_description) 
         VALUES (
             hotel_id, 
             admin_id,
@@ -87,5 +89,4 @@ BEGIN
 
     -- Notification that the hotel was successfully added.
     RAISE NOTICE 'Hotel added successfully with ID: %', hotel_id;
-END;
-$$ LANGUAGE plpgsql;
+END; $$;

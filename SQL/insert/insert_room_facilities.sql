@@ -12,5 +12,4 @@ BEGIN
 		INSERT INTO room_facilities (hotel_id,room_id,room_facilities)
 			VALUES (add_hotel_id,add_room_id,add_facilities);
 	END IF;
-END;
-$$
+END; $$;

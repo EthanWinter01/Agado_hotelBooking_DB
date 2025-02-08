@@ -4,7 +4,7 @@ CREATE OR REPLACE PROCEDURE book(
 	book_user_id INT,
 	book_hotel_id INT,
 	book_room_id INT,
-	book_description VARCHAR(256)
+	book_description VARCHAR(256) DEFAULT NULL
 ) 
 LANGUAGE plpgsql
 AS $$
