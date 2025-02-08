@@ -1,9 +1,11 @@
-CREATE OR REPLACE PROCEDURE user_edit_date(
+CREATE OR REPLACE PROCEDURE user_update_date(
     booking_id_update INT,
     update_check_in DATE,
     update_check_out DATE,
     user_id_update INT,
-    description VARCHAR(256) DEFAULT NULL;
+	book_room_id INT,
+	book_hotel_id INT,
+    description VARCHAR(256) DEFAULT NULL
 )
 LANGUAGE PLPGSQL
 AS
@@ -24,6 +26,19 @@ BEGIN
         IF update_check_in > update_check_out THEN
             RAISE EXCEPTION 'check in time must come before check out time';
 
+		ELSIF EXISTS (
+	    	SELECT *
+	    	FROM booking_transaction b
+	    	WHERE b.room_id = book_room_id 
+	      	AND b.hotel_id = book_hotel_id
+	      	AND (
+	        	  -- Check if the new booking range overlaps with an existing one
+	          		(b.check_in_date, b.check_out_date) 
+	          	OVERLAPS (update_check_in, update_check_out)
+	      	)
+		) THEN 
+	    	RAISE EXCEPTION 'Room is already booked for the requested dates.';
+
         ELSIF update_check_out - update_check_in <= 3 THEN -- check that duration must within 3 nights
             -- update that booking transaction
             UPDATE booking_transaction
@@ -40,7 +55,7 @@ BEGIN
                 'user_update_booking',
                 cast(NOW() AS TIMESTAMP),
                 description
-            )
+            );
 
             RAISE NOTICE 'change date successfully';
 
