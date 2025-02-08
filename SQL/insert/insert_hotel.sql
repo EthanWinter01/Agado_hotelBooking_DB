@@ -32,8 +32,6 @@ DECLARE
     hotel_id INT;
     floor INT;
     room_id INT;
-    room_price_min INT;
-    room_price_max INT;
     room_facilities VARCHAR(256);
     room_type VARCHAR(64);
 BEGIN
@@ -50,9 +48,9 @@ BEGIN
     INSERT INTO hotel(hotel_id, map_url, hotel_location, check_in_time, check_out_time, hotel_phonenumber, hotel_facilities)
         VALUES (hotel_id, map_url, hotel_location, check_in, check_out, hotel_number, facilities);
 
-    CALL insert_room_type_facilities(hotel_id, 'Cheap', facilities1);
-    CALL insert_room_type_facilities(hotel_id, 'Medium', facilities2);
-    CALL insert_room_type_facilities(hotel_id, 'Expensive', facilities3);
+    CALL insert_room_type_facilities(hotel_id, 'Cheap', facilities1, min1, max1);
+    CALL insert_room_type_facilities(hotel_id, 'Medium', facilities2, min2, max2);
+    CALL insert_room_type_facilities(hotel_id, 'Expensive', facilities3, min3, max3);
 
     -- -- Add hotel amenities information
     -- INSERT INTO hotel_facilities(hotel_id, wifi, pool, valet_parking)
@@ -67,25 +65,16 @@ BEGIN
     FOR floor IN 2..(1 + num_floors) LOOP
         -- Set room prices according to the floor range.
         IF floor >= c1 AND floor < c2 THEN
-            room_price_min := min1;
-            room_price_max := max1;
-            room_facilities := facilities1;
             room_type := 'Cheap';
         ELSIF floor >= c2 AND floor < c3 THEN
-            room_price_min := min2;
-            room_price_max := max2;
-            room_facilities := facilities2;
             room_type := 'Medium';
         ELSE
-            room_price_min := min3;
-            room_price_max := max3;
-            room_facilities := facilities3;
             room_type := 'Expensive';
         END IF;
 
         -- Loop creates rooms within the floor.
         FOR room_id IN 1..num_rooms_per_floor LOOP
-            CALL insert_room(hotel_id, floor, (floor * 100) + room_id, room_type, room_price_min, room_price_max, room_facilities);
+            CALL insert_room(hotel_id, floor, (floor * 100) + room_id, room_type);
         END LOOP;
     END LOOP;
 

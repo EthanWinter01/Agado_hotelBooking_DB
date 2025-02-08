@@ -57,17 +57,19 @@
 
 -- new vertion
 
-CREATE OR REPLACE PROCEDURE update_hotel_overall_info(
+CREATE OR REPLACE PROCEDURE update_hotel(
     admin_id INT,
-    p_hotel_id INT,
+    hotel_id INT,
     new_map_url VARCHAR DEFAULT NULL,
     new_hotel_location VARCHAR(256) DEFAULT NULL,
     new_check_in TIME DEFAULT NULL,
     new_check_out TIME DEFAULT NULL,
-    new_wifi VARCHAR(256) DEFAULT NULL,
-    new_pool VARCHAR(256) DEFAULT NULL,
-    new_valet_parking VARCHAR(256) DEFAULT NULL,
-    new_hotel_phonenumber VARCHAR(10) DEFAULT NULL
+    new_hotel_facilities VARCHAR(512) DEFAULT NULL,
+    -- new_wifi VARCHAR(256) DEFAULT NULL,
+    -- new_pool VARCHAR(256) DEFAULT NULL,
+    -- new_valet_parking VARCHAR(256) DEFAULT NULL,
+    new_hotel_phonenumber VARCHAR(10) DEFAULT NULL,
+    insert_description VARCHAR(256) DEFAULT NULL 
 ) AS $$
 DECLARE
     is_admin INT;
@@ -88,7 +90,8 @@ BEGIN
         hotel_location = COALESCE(new_hotel_location, hotel_location),
         check_in_time = COALESCE(new_check_in, check_in_time),
         check_out_time = COALESCE(new_check_out, check_out_time),
-        hotel_phonenumber = COALESCE(new_hotel_phonenumber, hotel_phonenumber)
+        hotel_phonenumber = COALESCE(new_hotel_phonenumber, hotel_phonenumber),
+        hotel_facilities = COALESCE(new_hotel_facilities, hotel_facilities)
     WHERE hotel_id = p_hotel_id;
 
     UPDATE hotel_facilities
@@ -97,9 +100,14 @@ BEGIN
         valet_parking = COALESCE(new_valet_parking, valet_parking)
     WHERE hotel_id = p_hotel_id;
 
-    INSERT INTO edit_overall_info (hotel_id, user_id, edit_timestamp)
-    VALUES (p_hotel_id, admin_id, NOW());
-
+    INSERT INTO hotel_log (hotel_id, user_id, action_timestamp, action_type, action_description)
+        VALUES (
+            p_hotel_id, 
+            admin_id, 
+            CAST(NOW() AS TIMESTAMP), 
+            'admin_update_hotel', 
+            insert_description
+        );
     RAISE NOTICE 'Hotel updated successfully';
 END;
 $$ LANGUAGE plpgsql;

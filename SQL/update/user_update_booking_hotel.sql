@@ -4,8 +4,7 @@ CREATE OR REPLACE PROCEDURE user_edit_hotel(
     user_id_edit INT
 )
 LANGUAGE PLPGSQL
-AS
-$$
+AS $$
 DECLARE
     new_room_id INT;
 BEGIN 
