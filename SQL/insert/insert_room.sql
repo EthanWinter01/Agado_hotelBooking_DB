@@ -19,5 +19,5 @@ BEGIN
             TRUE,  -- room is empty
             _type
         );
-	CALL insert_room_facilities(hotel_id,_type,facilities);
+	CALL insert_room_type_facilities(hotel_id,room_type,room_facilities);
 END; $$;
