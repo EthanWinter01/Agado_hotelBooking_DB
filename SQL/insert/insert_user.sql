@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE INSERT_user(
+CREATE OR REPLACE PROCEDURE insert_user(
     p_device_type VARCHAR(32),
     p_officer_id INT, 
     p_name VARCHAR(64),
@@ -10,26 +10,28 @@ CREATE OR REPLACE PROCEDURE INSERT_user(
     p_user_type VARCHAR(32)  
 )
 LANGUAGE plpgsql 
-AS $$
+AS $$ 
 DECLARE 
     new_user_id INT;
 BEGIN
     new_user_id := util_gen_user_id(p_user_type);
-    
-    -- Ensure unique email fOR registered users
+
+    -- Ensure unique email for registered users and admins
     IF p_user_type = 'registerred_user' THEN
-        IF EXISTS(SELECT 1 FROM registerred_user WHERE user_email = p_email) THEN
-            RAISE EXCEPTION 'Email already in use: %', p_email;  -- Consistent variable name
+        IF EXISTS (SELECT 1 FROM registerred_user WHERE user_email = p_email) THEN
+            RAISE EXCEPTION 'Email already in use: %', p_email; 
         END IF;
-    ELSEIF p_user_type = 'admin' THEN  -- Use 'elsIF' instead of 'ELSE IF'
-        IF EXISTS(SELECT 1 FROM admin WHERE admin_email = p_email) THEN
-            RAISE EXCEPTION 'Email already in use: %', p_email;  -- Consistent variable name
+    ELSIF p_user_type = 'admin' THEN 
+        IF EXISTS (SELECT 1 FROM admin WHERE admin_email = p_email) THEN
+            RAISE EXCEPTION 'Email already in use: %', p_email; 
         END IF;
     END IF;
-    
+
+    -- Insert into usert table
     INSERT INTO usert(user_id, device_type)
         VALUES (new_user_id, p_device_type);
-        
+
+    -- Insert based on user type
     CASE p_user_type
         WHEN 'admin' THEN
             INSERT INTO admin (user_id, officer_id, admin_name, admin_passwORd, telephone_number, admin_email)

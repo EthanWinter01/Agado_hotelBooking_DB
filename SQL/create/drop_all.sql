@@ -1,9 +1,8 @@
 -- drop all table at once
 
 DROP TABLE IF EXISTS booking_transaction CASCADE;
-DROP TABLE IF EXISTS view_hotel_info CASCADE;
-DROP TABLE IF EXISTS edit_overall_info CASCADE;
-DROP TABLE IF EXISTS manages_booking CASCADE;
+DROP TABLE IF EXISTS booking_log CASCADE;
+DROP TABLE IF EXISTS hotel_log CASCASE;
 
 DROP TABLE IF EXISTS admin CASCADE;
 DROP TABLE IF EXISTS unregisterred_user CASCADE;
