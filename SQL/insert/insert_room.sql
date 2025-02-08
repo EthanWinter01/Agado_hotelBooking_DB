@@ -2,10 +2,10 @@ CREATE OR REPLACE PROCEDURE insert_room(
     hotel_id INT, 
     floor INT, 
     room_id INT, 
-    room_type VARCHAR(64), 
+    _type VARCHAR(64), 
     room_price_min INT, 
     room_price_max INT,
-    room_facilities VARCHAR(256)
+    facilities VARCHAR(256)
 )
 LANGUAGE plpgsql 
 AS $$
@@ -17,7 +17,7 @@ BEGIN
             room_price_min, 
             room_price_max, 
             TRUE,  -- room is empty
-            room_type
+            _type
         );
-	CALL insert_room_facilities(hotel_id,room_type,room_facilities);
+	CALL insert_room_facilities(hotel_id,_type,facilities);
 END; $$;

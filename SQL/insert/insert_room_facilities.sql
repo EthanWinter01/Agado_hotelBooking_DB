@@ -6,7 +6,7 @@ CREATE OR REPLACE PROCEDURE insert_room_facilities(
 LANGUAGE plpgsql
 AS $$
 BEGIN
-	IF add_facilities IN (SELECT room_facilities FROM room_facilities WHERE add_hotel_id =hotel_id AND add_room_type = room_type)
+	IF add_facilities IN (SELECT room_facility FROM room_facilities  WHERE add_hotel_id =hotel_id AND add_room_type = room_type)
 		THEN RAISE EXCEPTION '% have already added.(No replacement)',add_facilities;
 	ELSE 
 		INSERT INTO room_facilities (hotel_id,room_type,room_facilities)
