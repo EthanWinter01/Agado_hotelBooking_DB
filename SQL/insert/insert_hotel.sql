@@ -1,7 +1,7 @@
 CREATE OR REPLACE PROCEDURE insert_hotel(
     admin_id INT,
     map_url VARCHAR DEFAULT NULL,
-    hotel_location VARCHAR(256) DEFAULT NULL,
+    hotel_name VARCHAR(256) DEFAULT NULL,
     check_in TIME DEFAULT NULL,
     check_out TIME DEFAULT NULL,
     facilities VARCHAR(512) DEFAULT NULL,
@@ -45,8 +45,8 @@ BEGIN
     hotel_id := util_gen_hotel_id();
 
     -- Add hotel information
-    INSERT INTO hotel(hotel_id, map_url, hotel_location, check_in_time, check_out_time, hotel_phonenumber, hotel_facilities)
-        VALUES (hotel_id, map_url, hotel_location, check_in, check_out, hotel_number, facilities);
+    INSERT INTO hotel(hotel_id, map_url, hotel_name, check_in_time, check_out_time, hotel_phonenumber, hotel_facilities)
+        VALUES (hotel_id, map_url, hotel_name, check_in, check_out, hotel_number, facilities);
 
     CALL insert_room_type_facilities(hotel_id, 'Cheap', facilities1, min1, max1);
     CALL insert_room_type_facilities(hotel_id, 'Medium', facilities2, min2, max2);
