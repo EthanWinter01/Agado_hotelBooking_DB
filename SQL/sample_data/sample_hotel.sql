@@ -112,9 +112,9 @@ CALL insert_hotel(
     15000, 20000,  
     25000, 30000,  
     5, 15, 25,
-    '',
-    '',
-    ''    
+    'Cozy queen bed, garden view, air conditioning, free WiFi, mini-fridge, basic toiletries, no room service',
+    'King bed, private balcony, ocean view, smart TV, minibar, rainfall shower, coffee machine',
+    'Private villa, infinity pool, butler service, spa access, luxury linens, premium minibar, oceanfront terrace'    
 );
 
 -- Maximum Facilities
@@ -128,7 +128,10 @@ CALL insert_hotel(
     4000, 9000,  
     13000, 18000,  
     22000, 27000,  
-    3, 18, 30    
+    3, 18, 30,
+    'Single bed, city view, air conditioning, free WiFi, shared bathroom, basic toiletries, no minibar',
+    'Queen bed, private bathroom, smart TV, minibar, high-speed WiFi, skyline view, coffee maker',
+    'Penthouse suite, panoramic windows, executive lounge access, luxury toiletries, in-room dining, 24/7 concierge'
 );
 
 -- Maximum Check-in & Check-out Time Values
@@ -142,7 +145,10 @@ CALL insert_hotel(
     1200, 2200,  
     3000, 4200,  
     5000, 6200,  
-    2, 10, 20    
+    2, 10, 20
+    'Twin bed, dim lighting, air conditioning, free WiFi, shared bathroom, basic toiletries, no minibar',
+    'Queen bed, private bathroom, smart TV, minibar, city skyline view, coffee maker',
+    'King bed, mood lighting, soundproof walls, luxury linens, 24/7 room service, in-room bar, VIP lounge access'   
 );
 
 -- Another Standard Hotel Setup
@@ -157,5 +163,7 @@ CALL insert_hotel(
     1600, 2500,  
     2800, 4000,  
     2, 6, 9,
-    
+    'Cozy double bed, garden view, air conditioning, free WiFi, mini-fridge, basic toiletries, no room service',
+    'King bed, private balcony, ocean view, smart TV, minibar, rainfall shower, coffee machine',
+    'Beachfront villa, infinity pool, butler service, spa access, luxury linens, premium minibar, sunset terrace'
 );
