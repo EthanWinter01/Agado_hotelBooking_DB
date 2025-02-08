@@ -38,7 +38,7 @@ BEGIN
 
         -- Return hotel and room details along with room type facilities
         RETURN QUERY
-        SELECT h.hotel_id, h.hotel_name, h.map_url, h.hotel_name, h.hotel_phonenumber, 
+        SELECT h.hotel_id, h.hotel_name, h.map_url, h.hotel_phonenumber, 
                h.check_in_time, h.check_out_time, h.hotel_facilities, available, 
                r.room_id, r.room_type, rtf.min_price, rtf.max_price, rtf.room_facilities
         FROM hotel h
