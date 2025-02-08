@@ -30,7 +30,7 @@
 
 -- new vertion
 
-CREATE OR REPLACE PROCEDURE delete_hotel_overall_info (
+CREATE OR REPLACE PROCEDURE delete_hotel(
     admin_id INT,
     p_hotel_id INT
 )
@@ -50,13 +50,11 @@ BEGIN
         RAISE EXCEPTION 'Error: Hotel does not exist';
     END IF;
     
-    DELETE FROM edit_overall_info WHERE hotel_id = p_hotel_id;
-    DELETE FROM view_hotel_info WHERE hotel_id = p_hotel_id;
-    DELETE FROM manages_booking WHERE booking_id IN (SELECT booking_id FROM booking_transaction WHERE hotel_id = p_hotel_id);
+    DELETE FROM hotel_log WHERE hotel_id = p_hotel_id;
+    DELETE FROM booking_log WHERE booking_id IN (SELECT booking_id FROM booking_transaction WHERE hotel_id = p_hotel_id);
     DELETE FROM booking_transaction WHERE hotel_id = p_hotel_id;
-    DELETE FROM room_facilities WHERE hotel_id = p_hotel_id;
+    DELETE FROM room_type_facilities WHERE hotel_id = p_hotel_id;
     DELETE FROM room WHERE hotel_id = p_hotel_id;
-    DELETE FROM hotel_facilities WHERE hotel_id = p_hotel_id;
     DELETE FROM hotel WHERE hotel_id = p_hotel_id;
     
     RAISE NOTICE 'Hotel deleted successfully';
