@@ -16,7 +16,6 @@ DECLARE
 BEGIN
     new_user_id := util_gen_user_id(p_user_type);
 
-    -- Ensure unique email for registered users and admins
     IF p_user_type = 'registerred_user' THEN
         IF EXISTS (SELECT 1 FROM registerred_user WHERE user_email = p_email) THEN
             RAISE EXCEPTION 'Email already in use: %', p_email; 
@@ -27,21 +26,19 @@ BEGIN
         END IF;
     END IF;
 
-    -- Insert into usert table
     INSERT INTO usert(user_id, device_type)
         VALUES (new_user_id, p_device_type);
 
-    -- Insert based on user type
     CASE p_user_type
         WHEN 'admin' THEN
             INSERT INTO admin (user_id, officer_id, admin_name, admin_passwORd, telephone_number, admin_email)
-            VALUES (new_user_id, p_officer_id, p_name, p_passwORd, p_telephone_number, p_email); 
+                VALUES (new_user_id, p_officer_id, p_name, p_passwORd, p_telephone_number, p_email); 
         WHEN 'unregisterred_user' THEN
             INSERT INTO unregisterred_user (user_id)
-            VALUES (new_user_id);
+                VALUES (new_user_id);
         WHEN 'registerred_user' THEN
             INSERT INTO registerred_user (user_id, user_name, user_passwORd, user_email, telephone_number, register_date, birth_date) 
-            VALUES (new_user_id, p_name, p_passwORd, p_email, p_telephone_number, p_register_date, p_birth_date);
+                VALUES (new_user_id, p_name, p_passwORd, p_email, p_telephone_number, p_register_date, p_birth_date);
         ELSE
             RAISE EXCEPTION 'Invalid user type: %', p_user_type;
     END CASE;

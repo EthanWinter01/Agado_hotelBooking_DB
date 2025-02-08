@@ -1,5 +1,5 @@
-CREATE OR REPLACE PROCEDURE add_hotel_overall_info(
-    admin_id INT,
+CREATE OR REPLACE PROCEDURE insert_hotel_overall_info(
+    -- admin_id INT,
     map_url VARCHAR DEFAULT NULL,
     hotel_location VARCHAR(256) DEFAULT NULL,
     check_in TIME DEFAULT NULL,
@@ -18,7 +18,8 @@ CREATE OR REPLACE PROCEDURE add_hotel_overall_info(
     max3 INT DEFAULT 3000,         -- ราคาสูงสุดของห้องราคาแพง
     c1 INT DEFAULT 2,              -- ชั้นแรกที่เป็นห้องราคาถูก
     c2 INT DEFAULT 5,              -- ชั้นแรกที่เป็นห้องระดับกลาง
-    c3 INT DEFAULT 8               -- ชั้นแรกที่เป็นห้องราคาแพง
+    c3 INT DEFAULT 8,              -- ชั้นแรกที่เป็นห้องราคาแพง
+    insert_description VARCHAR(256) DEFAULT NULL 
 ) AS $$
 DECLARE
     is_admin INT;
@@ -30,10 +31,10 @@ DECLARE
     room_type VARCHAR(64);
 BEGIN
     -- ตรวจสอบสิทธิ์แอดมิน
-    SELECT COUNT(*) INTO is_admin FROM admin WHERE user_id = admin_id;
-    IF is_admin = 0 THEN
-        RAISE EXCEPTION 'Permission denied: Only admins can add hotels';
-    END IF;
+    -- SELECT COUNT(*) INTO is_admin FROM admin WHERE user_id = admin_id;
+    -- IF is_admin = 0 THEN
+    --     RAISE EXCEPTION 'Permission denied: Only admins can add hotels';
+    -- END IF;
 
     -- สร้าง hotel_id ใหม่
     hotel_id := util_gen_hotel_id();
@@ -75,8 +76,14 @@ BEGIN
     END LOOP;
 
     -- บันทึกข้อมูลว่าแอดมินเป็นผู้เพิ่มโรงแรมนี้
-    INSERT INTO edit_overall_info (hotel_id, user_id) 
-    VALUES (hotel_id, admin_id);
+    INSERT INTO hotel_info (hotel_id, user_id, action_timestamp, action_type, action_description) 
+        VALUES (
+            hotel_id, 
+            admin_id,
+            CAST(NOW() AS TIMESTAMP),
+            'admin_insert_hotel',
+            insert_description
+        );
 
     -- แจ้งให้ทราบว่าเพิ่มโรงแรมสำเร็จ
     RAISE NOTICE 'Hotel added successfully with ID: %', hotel_id;
