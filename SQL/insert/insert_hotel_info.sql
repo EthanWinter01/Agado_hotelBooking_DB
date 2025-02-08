@@ -4,9 +4,10 @@ CREATE OR REPLACE PROCEDURE insert_hotel_overall_info(
     hotel_location VARCHAR(256) DEFAULT NULL,
     check_in TIME DEFAULT NULL,
     check_out TIME DEFAULT NULL,
-    wifi VARCHAR(256) DEFAULT NULL,
-    pool VARCHAR(256) DEFAULT NULL,
-    valet_parking VARCHAR(256) DEFAULT NULL,
+    facilities VARCHAR(512) DEFAULT NULL
+    -- wifi VARCHAR(256) DEFAULT NULL,
+    -- pool VARCHAR(256) DEFAULT NULL,
+    -- valet_parking VARCHAR(256) DEFAULT NULL,
     hotel_number VARCHAR(10) DEFAULT NULL,
     num_floors INT DEFAULT 5,      -- Number of floors of the hotel (not counting the 1st floor)
     num_rooms_per_floor INT DEFAULT 20, -- Number of rooms per floor (Equal for every class)

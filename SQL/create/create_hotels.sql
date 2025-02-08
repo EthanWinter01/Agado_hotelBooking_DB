@@ -11,17 +11,18 @@ CREATE TABLE hotel(
     map_url VARCHAR DEFAULT NULL,
     hotel_location VARCHAR(256),
     hotel_phonenumber VARCHAR(10), --substitute PhoneNumber table 
-    check_in_time time,
-    check_out_time time
+    check_in_time TIME,
+    check_out_time TIME,
+    hotel_facilities VARCHAR(512)
 );
 
-CREATE TABLE hotel_facilities(
-    hotel_id INT PRIMARY KEY,
-    wifi VARCHAR(256) DEFAULT NULL,
-    pool VARCHAR(256) DEFAULT NULL,
-    valet_parking VARCHAR(256) DEFAULT NULL,
-    FOREIGN KEY(hotel_id) REFERENCES hotel(hotel_id)
-);
+-- CREATE TABLE hotel_facilities(
+--     hotel_id INT PRIMARY KEY,
+--     wifi VARCHAR(256) DEFAULT NULL,
+--     pool VARCHAR(256) DEFAULT NULL,
+--     valet_parking VARCHAR(256) DEFAULT NULL,
+--     FOREIGN KEY(hotel_id) REFERENCES hotel(hotel_id)
+-- );
 
 CREATE TABLE room(
     hotel_id INT,
