@@ -1,7 +1,6 @@
 CREATE OR REPLACE PROCEDURE update_room(
     update_hotel_id INT, 
     update_room_id INT,
-    update_status BOOLEAN, 
     update_room_type VARCHAR(64), 
 )
 LANGUAGE plpgsql 
