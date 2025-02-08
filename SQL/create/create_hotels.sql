@@ -31,13 +31,14 @@ CREATE TABLE room(
     max_price INT,
     status BOOLEAN,
     room_type VARCHAR(64),
+    room_facilities VARCHAR(256), --facilities description
     PRIMARY KEY(hotel_id, room_id),
     FOREIGN KEY(hotel_id) REFERENCES hotel(hotel_id)
 );
 
-CREATE TABLE room_facilities(
-    hotel_id INT,
-    room_id INT,
-    room_facilities VARCHAR(256), --facilities description
-    FOREIGN KEY(hotel_id, room_id) REFERENCES room(hotel_id, room_id)
-);
+-- CREATE TABLE room_facilities(
+--     hotel_id INT,
+--     room_id INT,
+--     room_facilities VARCHAR(256), --facilities description
+--     FOREIGN KEY(hotel_id, room_id) REFERENCES room(hotel_id, room_id)
+-- );

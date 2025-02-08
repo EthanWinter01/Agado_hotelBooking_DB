@@ -20,6 +20,9 @@ CREATE OR REPLACE PROCEDURE insert_hotel_overall_info(
     c1 INT DEFAULT 2,              -- The first floor is a cheap room.
     c2 INT DEFAULT 5,              -- The first floor is a middle level room.
     c3 INT DEFAULT 8,              -- The first floor is an expensive room.
+    facilities1 VARCHAR(256) DEFAULT NULL,  
+    facilities2 VARCHAR(256) DEFAULT NULL,  
+    facilities3 VARCHAR(256) DEFAULT NULL,  
     insert_description VARCHAR(256) DEFAULT NULL 
 ) 
 LANGUAGE plpgsql
@@ -31,6 +34,7 @@ DECLARE
     room_id INT;
     room_price_min INT;
     room_price_max INT;
+    room_facilities VARCHAR(256),
     room_type VARCHAR(64);
 BEGIN
     -- Check admin rights
@@ -44,9 +48,9 @@ BEGIN
 
     -- Add hotel information
     INSERT INTO hotel(hotel_id, map_url, hotel_location, check_in_time, check_out_time, hotel_phonenumber)
-        VALUES (hotel_id, map_url, hotel_location, check_in, check_out, hotel_number);
+        VALUES (hotel_id, map_url, hotel_location, check_in, check_out, hotel_number, facilities);
 
-    -- Add hotel amenities information
+    -- -- Add hotel amenities information
     -- INSERT INTO hotel_facilities(hotel_id, wifi, pool, valet_parking)
     --     VALUES (hotel_id, wifi, pool, valet_parking);
 
@@ -61,20 +65,23 @@ BEGIN
         IF floor >= c1 AND floor < c2 THEN
             room_price_min := min1;
             room_price_max := max1;
+            room_facilities := facilities1;
             room_type := 'Cheap';
         ELSIF floor >= c2 AND floor < c3 THEN
             room_price_min := min2;
             room_price_max := max2;
+            room_facilities := facilities2;
             room_type := 'Medium';
         ELSE
             room_price_min := min3;
             room_price_max := max3;
+            room_facilities := facilities3
             room_type := 'Expensive';
         END IF;
 
         -- Loop creates rooms within the floor.
         FOR room_id IN 1..num_rooms_per_floor LOOP
-            CALL insert_room(hotel_id, floor, (floor * 100) + room_id, room_type, room_price_min, room_price_max);
+            CALL insert_room(hotel_id, floor, (floor * 100) + room_id, room_type, room_price_min, room_price_max, room_facilities);
         END LOOP;
     END LOOP;
 
