@@ -1,6 +1,6 @@
 CREATE OR REPLACE PROCEDURE delete_room_type_facilities(
 	del_hotel_id int,
-	del_room_type int,
+	del_room_type VARCHAR(64),
 )
 LANGUAGE plpgsql
 AS $$
