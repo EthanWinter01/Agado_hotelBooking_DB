@@ -7,7 +7,7 @@ DROP TABLE IF EXISTS room_type_facilities CASCADE;
 CREATE TABLE hotel(
     hotel_id INT PRIMARY KEY,
     map_url VARCHAR DEFAULT NULL,
-    hotel_location VARCHAR(256),
+    hotel_name VARCHAR(256),
     hotel_phonenumber VARCHAR(10), --substitute PhoneNumber table 
     check_in_time TIME,
     check_out_time TIME,
