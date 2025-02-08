@@ -13,24 +13,24 @@ BEGIN
     IF NOT EXISTS (
         SELECT 1
         FROM admin a, registerred_user r 
-        WHERE a.user_id = user_id_edit OR r.user_id = user_id_edit
+        WHERE a.user_id = user_id_update OR r.user_id = user_id_update
     ) THEN
-        RAISE EXCEPTION 'there are no user id %', user_id_edit;
+        RAISE EXCEPTION 'there are no user id %', user_id_update;
     
     ELSE
     -- if user are allow to edit which are admin or register user
     -- do the following   
     -- check that check in time must come before check out time  
-        IF change_check_in > change_check_out THEN
+        IF update_check_in > update_check_out THEN
             RAISE EXCEPTION 'check in time must come before check out time';
 
-        ELSIF change_check_out - change_check_in <= 3 THEN -- check that duration must within 3 nights
+        ELSIF update_check_out - update_check_in <= 3 THEN -- check that duration must within 3 nights
             -- update that booking transaction
             UPDATE booking_transaction
-            SET check_in_date = change_check_in, 
-            check_out_date = change_check_out,
-            duration = change_check_out - change_check_in
-            WHERE booking_id = change_booking_id;
+            SET check_in_date = update_check_in, 
+            check_out_date = update_check_out,
+            duration = update_check_out - update_check_in
+            WHERE booking_id = booking_id_update;
 
             -- insert log into booking_log
             INSERT INTO booking_log(user_id, booking_id, action_type, action_timestamp, action_description) 
