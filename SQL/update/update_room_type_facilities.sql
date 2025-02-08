@@ -7,7 +7,7 @@ LANGUAGE plpgsql
 AS $$
 BEGIN
     UPDATE room_type_facilities
-        SET room_facilities = update_room_facilities,
+        SET room_facilities = update_room_facilities
         WHERE hotel_id = update_hotel_id AND room_type = update_room_type;
     RAISE NOTICE 'Room Facilities updated successfully';
 END; $$;
