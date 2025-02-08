@@ -7,7 +7,7 @@ CREATE OR REPLACE PROCEDURE insert_room(
 LANGUAGE plpgsql 
 AS $$
 BEGIN
-    INSERT INTO room(hotel_id, room_id, status, room_type)
+    INSERT INTO room(hotel_id, room_id, room_type)
         VALUES (
             hotel_id, 
             room_id, -- room_id ex. 209, 310, 501, ...
