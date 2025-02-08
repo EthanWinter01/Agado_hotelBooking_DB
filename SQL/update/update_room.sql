@@ -9,6 +9,7 @@ AS $$
 BEGIN
     UPDATE room
     SET status = update_status,
-    room_type = update_room_type
-    WHERE hotel_id = update_hotel_id AND room_id = update_room_id;
+        room_type = update_room_type
+        WHERE hotel_id = update_hotel_id AND room_id = update_room_id;
+    RAISE NOTICE 'Room updated successfully';
 END; $$;

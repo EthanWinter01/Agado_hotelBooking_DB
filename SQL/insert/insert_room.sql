@@ -11,7 +11,7 @@ BEGIN
         VALUES (
             hotel_id, 
             room_id, -- room_id ex. 209, 310, 501, ...
-            TRUE,  -- room is empty
+            -- TRUE,  -- room is empty
             room_type
         );
 END; $$;
