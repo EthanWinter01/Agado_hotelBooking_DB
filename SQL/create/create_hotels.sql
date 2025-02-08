@@ -1,10 +1,10 @@
 -- Create Hotel Table 
 
-DROP TABLE IF EXISTS hotel cascade;
-DROP TABLE IF EXISTS hotel_facilities cascade;
-DROP TABLE IF EXISTS phonenumber cascade;
-DROP TABLE IF EXISTS room cascade;
-DROP TABLE IF EXISTS room_facilities cascade;
+DROP TABLE IF EXISTS hotel CASCADE;
+DROP TABLE IF EXISTS hotel_facilities CASCADE;
+DROP TABLE IF EXISTS phonenumber CASCADE;
+DROP TABLE IF EXISTS room CASCADE;
+DROP TABLE IF EXISTS room_facilities CASCADE;
 
 CREATE TABLE hotel(
     hotel_id INT PRIMARY KEY,

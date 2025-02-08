@@ -1,10 +1,10 @@
 -- CREATE Users' TABLE 
 -- superclass/subclass by 8A method 
 
-DROP TABLE IF EXISTS admin cascade;
-DROP TABLE IF EXISTS unregisterred_user cascade;
-DROP TABLE IF EXISTS registerred_user cascade;
-DROP TABLE IF EXISTS usert cascade;
+DROP TABLE IF EXISTS admin CASCADE;
+DROP TABLE IF EXISTS unregisterred_user CASCADE;
+DROP TABLE IF EXISTS registerred_user CASCADE;
+DROP TABLE IF EXISTS usert CASCADE;
 
 CREATE TABLE usert (
 	user_id INT PRIMARY KEY,
