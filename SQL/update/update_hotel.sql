@@ -2,7 +2,7 @@
 --     admin_id INT,
 --     p_hotel_id INT,
 --     new_map_url VARCHAR DEFAULT NULL,
---     new_hotel_location VARCHAR(256) DEFAULT NULL,
+--     new_hotel_name VARCHAR(256) DEFAULT NULL,
 --     new_check_in TIME DEFAULT NULL,
 --     new_check_out TIME DEFAULT NULL,
 --     new_wifi VARCHAR(256) DEFAULT NULL,
@@ -28,7 +28,7 @@
 
 --     UPDATE hotel
 --     SET map_url = COALESCE(new_map_url, map_url),
---         hotel_location = COALESCE(new_hotel_location, hotel_location),
+--         hotel_name = COALESCE(new_hotel_name, hotel_name),
 --         check_in_time = COALESCE(new_check_in, check_in_time),
 --         check_out_time = COALESCE(new_check_out, check_out_time)
 --     WHERE hotel_id = p_hotel_id;
@@ -58,10 +58,10 @@
 -- new vertion
 
 CREATE OR REPLACE PROCEDURE update_hotel(
-    admin_id INT,
     hotel_id INT,
+    admin_id INT,
     new_map_url VARCHAR DEFAULT NULL,
-    new_hotel_location VARCHAR(256) DEFAULT NULL,
+    new_hotel_name VARCHAR(256) DEFAULT NULL,
     new_check_in TIME DEFAULT NULL,
     new_check_out TIME DEFAULT NULL,
     new_hotel_facilities VARCHAR(512) DEFAULT NULL,
@@ -87,7 +87,7 @@ BEGIN
 
     UPDATE hotel
     SET map_url = COALESCE(new_map_url, map_url),
-        hotel_location = COALESCE(new_hotel_location, hotel_location),
+        hotel_name = COALESCE(new_hotel_name, hotel_name),
         check_in_time = COALESCE(new_check_in, check_in_time),
         check_out_time = COALESCE(new_check_out, check_out_time),
         hotel_phonenumber = COALESCE(new_hotel_phonenumber, hotel_phonenumber),
