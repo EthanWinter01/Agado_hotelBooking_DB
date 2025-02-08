@@ -1,8 +1,9 @@
 CREATE OR REPLACE PROCEDURE user_edit_date(
-    change_booking_id INT,
-    change_check_in DATE,
-    change_check_out DATE,
-    user_id_edit INT
+    booking_id_update INT,
+    update_check_in DATE,
+    update_check_out DATE,
+    user_id_update INT,
+    description VARCHAR(256) DEFAULT NULL;
 )
 LANGUAGE PLPGSQL
 AS
@@ -31,9 +32,15 @@ BEGIN
             duration = change_check_out - change_check_in
             WHERE booking_id = change_booking_id;
 
-            -- insert log into manages_booking
-            INSERT INTO manages_booking(user_id, booking_id, edit_timestamp)
-            VALUES (user_id_edit, change_booking_id, cast(NOW() AS TIMESTAMP));
+            -- insert log into booking_log
+            INSERT INTO booking_log(user_id, booking_id, action_type, action_timestamp, action_description) 
+            VALUES (
+                user_id_update,
+                booking_id_update,
+                'user_update_booking',
+                cast(NOW() AS TIMESTAMP),
+                description
+            )
 
             RAISE NOTICE 'change date successfully';
 
