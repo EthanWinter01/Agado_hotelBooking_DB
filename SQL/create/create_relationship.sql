@@ -1,7 +1,6 @@
 DROP TABLE IF EXISTS booking_transaction CASCADE;
-DROP TABLE IF EXISTS view_hotel_info CASCADE;
-DROP TABLE IF EXISTS edit_overall_info CASCADE;
-DROP TABLE IF EXISTS manages_booking CASCADE;
+DROP TABLE IF EXISTS booking_log CASCADE;
+DROP TABLE IF EXISTS hotel_log CASCADE;
 
 --log contain all booking
 CREATE TABLE booking_transaction(
@@ -44,7 +43,7 @@ CREATE TABLE booking_transaction(
 --     FOREIGN KEY(user_id) REFERENCES usert(user_id)
 -- );
 
-CREATE hotel_log(
+CREATE TABLE hotel_log(
     user_id INT,
     hotel_id INT, 
     action_type VARCHAR,
@@ -54,7 +53,7 @@ CREATE hotel_log(
     FOREIGN KEY (hotel_id) REFERENCES usert(user_id)
 );
 
-CREATE booking_log(
+CREATE TABLE booking_log(
     user_id INT, 
     booking_id INT, 
     action_type VARCHAR,
