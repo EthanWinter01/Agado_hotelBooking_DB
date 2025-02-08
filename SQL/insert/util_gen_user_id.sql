@@ -1,21 +1,21 @@
-create or replace function util_gen_user_id(
-    user_type varchar
+CREATE OR REPLACE FUNCTION util_gen_user_id(
+    user_type VARCHAR
 )
-returns int 
-language plpgsql
-as $$
-declare 
-    new_user_id int;
-    base_id int;
-begin 
-    case user_type 
-        when 'admin' then base_id := 900000000;
-        when 'registerred_user' then base_id := 500000000;
-        when 'unregisterred_user' then base_id := 100000000;
-        else 
+RETURNS INT 
+LANGUAGE plpgsql
+AS $$
+DECLARE 
+    new_user_id INT;
+    base_id INT;
+BEGIN 
+    CALL user_type 
+        WHEN 'admin' THEN base_id := 900000000;
+        WHEN 'registerred_user' THEN base_id := 500000000;
+        WHEN 'unregisterred_user' THEN base_id := 100000000;
+        ELSE 
             raise exception 'Invalid user type: %', user_type;
-    end case;
-    execute format('select coalesce(max(user_id) - %s, 0) + %s + 1 from %I', base_id, base_id, user_type)
-    into new_user_id;
-    return new_user_id;
-end; $$
+    END CASE;
+    EXECUTE FOMRAT('SELECT COALESCE(MAX(user_id) - %s, 0) + %s + 1 FROM %I', base_id, base_id, user_type)
+        INTO new_user_id;
+    RETURN new_user_id;
+END; $$
