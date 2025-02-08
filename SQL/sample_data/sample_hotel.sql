@@ -145,7 +145,7 @@ CALL insert_hotel(
     1200, 2200,  
     3000, 4200,  
     5000, 6200,  
-    2, 10, 20
+    2, 10, 20,
     'Twin bed, dim lighting, air conditioning, free WiFi, shared bathroom, basic toiletries, no minibar',
     'Queen bed, private bathroom, smart TV, minibar, city skyline view, coffee maker',
     'King bed, mood lighting, soundproof walls, luxury linens, 24/7 room service, in-room bar, VIP lounge access'   
