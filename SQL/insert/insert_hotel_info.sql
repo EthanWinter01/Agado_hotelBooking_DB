@@ -47,7 +47,7 @@ BEGIN
     hotel_id := util_gen_hotel_id();
 
     -- Add hotel information
-    INSERT INTO hotel(hotel_id, map_url, hotel_location, check_in_time, check_out_time, hotel_phonenumber)
+    INSERT INTO hotel(hotel_id, map_url, hotel_location, check_in_time, check_out_time, hotel_phonenumber, hotel_facilities)
         VALUES (hotel_id, map_url, hotel_location, check_in, check_out, hotel_number, facilities);
 
     -- -- Add hotel amenities information

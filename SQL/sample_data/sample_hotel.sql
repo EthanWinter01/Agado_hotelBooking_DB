@@ -151,7 +151,10 @@ CALL insert_hotel_overall_info(
     800, 1500,  
     1800, 2500,  
     3000, 4000,  
-    2, 5, 7  
+    2, 5, 7,
+    'Single bed, ceiling fan, shared bathroom, free WiFi, basic toiletries, no minibar',
+    'Queen bed, air conditioning, private bathroom, TV, WiFi, minibar, toiletries',
+    'King bed, air conditioning, private jacuzzi, smart TV, high-speed WiFi, luxury toiletries, balcony, 24/7 room service'  
 );
 
 -- Minimal Input Value
@@ -164,7 +167,10 @@ CALL insert_hotel_overall_info(
     200, 300,  
     400, 500,  
     600, 700,  
-    2, 3, 4   
+    2, 3, 4,
+    'Twin bed, heater, shared bathroom, free WiFi, basic toiletries, no TV',
+    'Queen bed, heating, private bathroom, TV, WiFi, minibar, toiletries',
+    'King bed, fireplace, private jacuzzi, smart TV, high-speed WiFi, luxury toiletries, scenic balcony, 24/7 room service'   
 );
 
 -- Missing Optional Fields
@@ -177,7 +183,10 @@ CALL insert_hotel_overall_info(
     700, 1400,  
     1600, 2200,  
     2600, 3200,  
-    2, 3, 4     
+    2, 3, 4,
+    'Cozy twin bed, ceiling fan, shared bathroom, free WiFi, beach access, no minibar, basic toiletries',
+    'Queen bed, air conditioning, private balcony, ocean breeze, TV, minibar, WiFi, hammock',
+    'King bed, panoramic sea view, private jacuzzi, smart TV, high-speed WiFi, luxury toiletries, beachside breakfast, personal butler'
 );
 
 -- No Pool, No Parking
@@ -190,7 +199,10 @@ CALL insert_hotel_overall_info(
     900, 1600,  
     1700, 2500,  
     2800, 3500,  
-    2, 4, 6     
+    2, 4, 6,
+    'Cozy twin bed, heater, shared bathroom, free WiFi, mountain view, basic toiletries, no TV',
+    'Queen bed, fireplace, private balcony, scenic view, TV, minibar, WiFi, toiletries',
+    'King bed, panoramic mountain view, private hot tub, smart TV, luxury toiletries, high-speed WiFi, in-room dining, 24/7 concierge'
 );
 
 -- Late Check-in, Early Check-out
@@ -203,7 +215,10 @@ CALL insert_hotel_overall_info(
     750, 1300,  
     1800, 2400,  
     3000, 3800,  
-    3, 6, 8     
+    3, 6, 8,
+    'Compact twin bed, air conditioning, shared bathroom, free WiFi, city view, basic toiletries, no minibar',
+    'Queen bed, private bathroom, smart TV, minibar, WiFi, city skyline view, coffee maker',
+    'King bed, floor-to-ceiling windows, executive lounge access, luxury toiletries, high-speed WiFi, in-room dining, 24/7 concierge'
 );
 
 -- Maximum Floors and Rooms
@@ -216,7 +231,10 @@ CALL insert_hotel_overall_info(
     1500, 3000,  
     3500, 5000,  
     6000, 7500,  
-    2, 20, 35    
+    2, 20, 35,
+    'Twin bed, air conditioning, shared bathroom, free WiFi, city skyline view, basic toiletries, no minibar',
+    'Queen bed, private bathroom, smart TV, minibar, WiFi, high-floor city view, coffee maker',
+    'King bed, floor-to-ceiling windows, skyline panorama, private jacuzzi, luxury toiletries, high-speed WiFi, in-room dining, personal butler'
 );
 
 -- Maximum Room Prices
@@ -229,7 +247,10 @@ CALL insert_hotel_overall_info(
     5000, 10000,  
     15000, 20000,  
     25000, 30000,  
-    5, 15, 25    
+    5, 15, 25,
+    '',
+    '',
+    ''    
 );
 
 -- Maximum Facilities
@@ -268,5 +289,6 @@ CALL insert_hotel_overall_info(
     700, 1400,  
     1600, 2500,  
     2800, 4000,  
-    2, 6, 9     
+    2, 6, 9,
+    
 );
