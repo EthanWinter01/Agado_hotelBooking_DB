@@ -1,5 +1,5 @@
 -- --Standard Hotel Setup
--- CALL insert_hotel_overall_info(
+-- CALL insert_hotel(
 --     -- 900000007, 
 --     'http://example.com/hotel1', 
 --     'Grand Palace Hotel', 
@@ -13,7 +13,7 @@
 -- );
 
 -- --Minimal Input Value
--- CALL insert_hotel_overall_info(
+-- CALL insert_hotel(
 --     -- 900000008, 
 --     NULL, 
 --     'Cozy Cabin Inn', 
@@ -27,7 +27,7 @@
 -- );
 
 -- --Missing Optional Fields
--- CALL insert_hotel_overall_info(
+-- CALL insert_hotel(
 --     -- 900000009, 
 --     NULL, 
 --     'Beachfront Resort', 
@@ -41,7 +41,7 @@
 -- );
 
 -- --No Pool, No Parking
--- CALL insert_hotel_overall_info(
+-- CALL insert_hotel(
 --     -- 900000009, 
 --     'http://example.com/hotel4', 
 --     'Mountain View Lodge', 
@@ -55,7 +55,7 @@
 -- );
 
 -- --Late Check-in, Early Check-out
--- CALL insert_hotel_overall_info(
+-- CALL insert_hotel(
 --     -- 900000004, 
 --     'http://example.com/latecheckin', 
 --     'Downtown Plaza Hotel', 
@@ -69,7 +69,7 @@
 -- );
 
 -- --Maximum Floors and Rooms
--- CALL insert_hotel_overall_info(
+-- CALL insert_hotel(
 --     -- 900000005, 
 --     'http://example.com/max1', 
 --     'Super Skyscraper Hotel', 
@@ -83,7 +83,7 @@
 -- );
 
 -- --Maximum Room Prices
--- CALL insert_hotel_overall_info(
+-- CALL insert_hotel(
 --     -- 900000005, 
 --     'http://example.com/max2', 
 --     'Luxury Haven Resort', 
@@ -97,7 +97,7 @@
 -- );
 
 -- --Maximum Admin ID & All Facilities
--- CALL insert_hotel_overall_info(
+-- CALL insert_hotel(
 --     -- 900000007, 
 --     'http://example.com/max3', 
 --     'Ultimate Tower Hotel', 
@@ -111,7 +111,7 @@
 -- );
 
 -- --Maximum Check-in & Check-out Time Values
--- CALL insert_hotel_overall_info(
+-- CALL insert_hotel(
 --     -- 900000008, 
 --     'http://example.com/max4', 
 --     'Midnight Express Hotel', 
@@ -125,7 +125,7 @@
 -- );
 
 -- --another Standard Hotel Setup test case
--- CALL insert_hotel_overall_info(
+-- CALL insert_hotel(
 --     -- 900000002, 
 --     'http://example.com/hotel_standard2', 
 --     'Sunset Paradise Resort', 
@@ -142,7 +142,7 @@
 
 
 -- Standard Hotel Setup
-CALL insert_hotel_overall_info(
+CALL insert_hotel(
     'http://example.com/hotel1', 
     'Grand Palace Hotel', 
     '14:00', '12:00', 
@@ -158,7 +158,7 @@ CALL insert_hotel_overall_info(
 );
 
 -- Minimal Input Value
-CALL insert_hotel_overall_info(
+CALL insert_hotel(
     NULL, 
     'Cozy Cabin Inn', 
     NULL, NULL, 
@@ -174,7 +174,7 @@ CALL insert_hotel_overall_info(
 );
 
 -- Missing Optional Fields
-CALL insert_hotel_overall_info(
+CALL insert_hotel(
     NULL, 
     'Beachfront Resort', 
     '15:30', '11:00', 
@@ -190,7 +190,7 @@ CALL insert_hotel_overall_info(
 );
 
 -- No Pool, No Parking
-CALL insert_hotel_overall_info(
+CALL insert_hotel(
     'http://example.com/hotel4', 
     'Mountain View Lodge', 
     '13:00', '10:30', 
@@ -206,7 +206,7 @@ CALL insert_hotel_overall_info(
 );
 
 -- Late Check-in, Early Check-out
-CALL insert_hotel_overall_info(
+CALL insert_hotel(
     'http://example.com/latecheckin', 
     'Downtown Plaza Hotel', 
     '18:00', '08:00', 
@@ -222,7 +222,7 @@ CALL insert_hotel_overall_info(
 );
 
 -- Maximum Floors and Rooms
-CALL insert_hotel_overall_info(
+CALL insert_hotel(
     'http://example.com/max1', 
     'Super Skyscraper Hotel', 
     '12:00', '10:00', 
@@ -238,7 +238,7 @@ CALL insert_hotel_overall_info(
 );
 
 -- Maximum Room Prices
-CALL insert_hotel_overall_info(
+CALL insert_hotel(
     'http://example.com/max2', 
     'Luxury Haven Resort', 
     '13:30', '11:00', 
@@ -254,7 +254,7 @@ CALL insert_hotel_overall_info(
 );
 
 -- Maximum Facilities
-CALL insert_hotel_overall_info(
+CALL insert_hotel(
     'http://example.com/max3', 
     'Ultimate Tower Hotel', 
     '15:00', '12:30', 
@@ -267,7 +267,7 @@ CALL insert_hotel_overall_info(
 );
 
 -- Maximum Check-in & Check-out Time Values
-CALL insert_hotel_overall_info(
+CALL insert_hotel(
     'http://example.com/max4', 
     'Midnight Express Hotel', 
     '23:59', '00:01', 
@@ -280,7 +280,7 @@ CALL insert_hotel_overall_info(
 );
 
 -- Another Standard Hotel Setup
-CALL insert_hotel_overall_info(
+CALL insert_hotel(
     'http://example.com/hotel_standard2', 
     'Sunset Paradise Resort', 
     '15:00', '11:30', 

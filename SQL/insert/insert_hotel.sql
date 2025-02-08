@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE insert_hotel_overall_info(
+CREATE OR REPLACE PROCEDURE insert_hotel(
     admin_id INT,
     map_url VARCHAR DEFAULT NULL,
     hotel_location VARCHAR(256) DEFAULT NULL,
