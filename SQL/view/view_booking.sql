@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION admin_view_booking(
+CREATE OR REPLACE FUNCTION view_booking(
     admin_status BOOLEAN,
     action_type VARCHAR,
     search_value VARCHAR
