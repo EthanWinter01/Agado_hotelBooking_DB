@@ -25,7 +25,7 @@ BEGIN
 	ELSE
 		-- Add booking_transaction
 		INSERT INTO booking_transaction (booking_id,booking_date,duration,check_in_date,check_out_date,user_id,hotel_id,room_id)
-			VALUES (new_booking_id,now(),duration,check_in_date,check_out_date,book_user_id,book_hotel_id,book_room_id);
+			VALUES (new_booking_id, NOW(), duration, check_in_date, check_out_date, book_user_id, book_hotel_id, book_room_id);
 		-- Update room status to false
 		UPDATE room SET status = FALSE WHERE room_id = book_room_id AND hotel_id = book_hotel_id;
 		-- Add log

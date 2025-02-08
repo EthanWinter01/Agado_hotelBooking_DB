@@ -25,8 +25,6 @@ CREATE TABLE hotel(
 CREATE TABLE room(
     hotel_id INT,
     room_id INT,
-    min_price INT,
-    max_price INT,
     status BOOLEAN,
     room_type VARCHAR(64),
     PRIMARY KEY(hotel_id, room_id),
@@ -36,6 +34,8 @@ CREATE TABLE room(
 CREATE TABLE room_type_facilities(
     hotel_id INT,
     room_type VARCHAR(64),
+    min_price INT,
+    max_price INT,
     room_facilities VARCHAR(256), --facilities description
     FOREIGN KEY(hotel_id) REFERENCES hotel(hotel_id)
 );
