@@ -7,6 +7,6 @@ call delete_hotel(900000005, 10009);
 /*
 CREATE OR REPLACE PROCEDURE delete_hotel(
     admin_id INT,
-    p_hotel_id INT
+    delete_hotel_id INT
 )
 */
