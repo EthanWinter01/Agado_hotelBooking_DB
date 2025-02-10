@@ -1,5 +1,5 @@
 --Case1
-select * from view_booking(False,null,'100000001');
+select * from view_booking(False,null,'100000021');
 --Case2
 select * from view_booking(True,'None','-');
 --Case3

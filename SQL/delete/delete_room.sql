@@ -1,13 +1,13 @@
 CREATE OR REPLACE PROCEDURE delete_room(
     del_hotel_id int,
-    del_room_id int,
+    del_room_id int
 )
 LANGUAGE plpgsql
 AS $$
 BEGIN
-	IF NOT EXIST (
+	IF NOT EXISTS (
         SELECT * 
-            FROM room_facilities 
+            FROM room
             WHERE del_hotel_id = hotel_id 
                 AND del_room_id = room_id
     ) THEN 

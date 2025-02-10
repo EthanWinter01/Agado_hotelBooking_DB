@@ -1,11 +1,11 @@
 CREATE OR REPLACE PROCEDURE delete_room_type_facilities(
 	del_hotel_id int,
-	del_room_type VARCHAR(64),
+	del_room_type VARCHAR(64)
 )
 LANGUAGE plpgsql
 AS $$
 BEGIN
-	IF NOT EXIST (
+	IF NOT EXISTS (
 		SELECT * 
 			FROM room_facilities 
 			WHERE del_hotel_id =hotel_id 
