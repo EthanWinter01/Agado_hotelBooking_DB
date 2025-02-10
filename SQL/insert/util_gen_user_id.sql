@@ -18,4 +18,4 @@ BEGIN
     EXECUTE FORMAT('SELECT COALESCE(MAX(user_id) - %s, 0) + %s + 1 FROM %I', base_id, base_id, user_type)
         INTO new_user_id;
     RETURN new_user_id;
-END; $$
+END; $$;
